@@ -1,0 +1,6 @@
+# Easy Agile
+
+Easy Agile a Redmine plugin for doing agile development.
+
+Is a fork of {Simply Agile}(http://github.com/camelpunch/simply_agile) standalone project.
+
