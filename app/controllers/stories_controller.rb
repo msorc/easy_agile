@@ -1,5 +1,4 @@
 class StoriesController < ApplicationController
-  before_filter :get_project
   before_filter :get_iteration, :only => [:new, :create]
   before_filter :get_story, :only => [:edit, :update, :show, :estimate]
   before_filter :new_story, :only => [:new, :create]
@@ -49,7 +48,7 @@ class StoriesController < ApplicationController
 
   def estimate
     @body_classes = [controller_name, 'iteration_planning']
-    render :partial => 'stories/story', :object => @story 
+    render :partial => 'stories/story', :object => @story
   end
 
   def index
@@ -63,8 +62,8 @@ class StoriesController < ApplicationController
   end
 
   def new
-    @story.content = "As a 
-I want 
+    @story.content = "As a
+I want
 So that "
 
     if @iteration
