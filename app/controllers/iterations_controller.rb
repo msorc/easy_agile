@@ -1,12 +1,11 @@
 class IterationsController < ApplicationController
-  before_filter :get_project, :except => [:index]
+  before_filter :find_optional_project
   before_filter :get_iterations, :only => [:index]
   before_filter :get_finished_iterations, :only => [:finished]
   before_filter :get_pending_iterations, :only => [:planned]
   before_filter :get_iteration, :only => [:edit, :show, :update]
   before_filter :new_iteration, :only => [:new, :create]
   before_filter :get_stories, :only => [:edit, :new]
-  before_filter :set_current_user_on_resource
 
   def create
     @iteration.save_with_planned_stories_attributes! params[:stories]
@@ -36,6 +35,14 @@ class IterationsController < ApplicationController
   def show
     if @iteration.active?
       render :template => 'iterations/show_active'
+    end
+  end
+
+  def home
+    logger.info "*" * 50
+    logger.info @project
+    if @project.stories.empty?
+      render :template => 'iterations/home_guidance'
     end
   end
 

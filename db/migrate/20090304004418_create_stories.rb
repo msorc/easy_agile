@@ -5,6 +5,9 @@ class CreateStories < ActiveRecord::Migration
       t.integer :iteration_id
       t.string :name
       t.text :content
+      t.interger :estimate
+      t.string :status, :default => 'pending'
+      t.interger :priority, :default => 1
 
       t.timestamps
     end
