@@ -1,6 +1,4 @@
 class Story < ActiveRecord::Base
-  include CurrentUser
-  
   module Status
     PENDING = "pending"
     IN_PROGRESS = "in_progress"
@@ -12,7 +10,7 @@ class Story < ActiveRecord::Base
   belongs_to :iteration
   belongs_to :project
 
-  has_many(:acceptance_criteria, 
+  has_many(:acceptance_criteria,
            :order => 'criterion',
            :dependent => :destroy)
 
@@ -24,13 +22,13 @@ class Story < ActiveRecord::Base
   named_scope :assigned_or_available_for, lambda {|iteration|
     {
       :conditions => [
-        'status = ? AND (iteration_id = ? OR iteration_id IS NULL)', 
+        'status = ? AND (iteration_id = ? OR iteration_id IS NULL)',
         'pending', iteration.id
       ]
     }
   }
 
-  named_scope :backlog, 
+  named_scope :backlog,
     :conditions => ['status = ? AND iteration_id IS NULL', 'pending']
 
   validates_presence_of :name, :content, :project_id
