@@ -1,9 +1,0 @@
-<% content_for :title, 'Edit Project' %>
-<% content_for :h1, 'Edit Project' %>
-<% breadcrumbs link_to(h(@project), @project), 'Edit' %>
-<% form_for @project do |form| %>
-  <%= render form %>
-  <p class="submit">
-    <%= form.submit 'Update Project' %>
-  </p>
-<% end %>
