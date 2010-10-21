@@ -1,0 +1,14 @@
+<% content_for :title, "#{@project} | Projects" %>
+<% content_for :h1, h(@project) %>
+<% content_for :actions do %>
+<li><%= link_to "Edit", edit_project_path(@project) %></li>
+<% end %>
+<% breadcrumbs h(@project) %>
+<% body_classes << 'guidance' %>
+
+<%= simple_format h(@project.description) %>
+
+<h2>No Stories</h2>
+<p>
+You should start by <%= link_to 'creating a story', [:new, @project, :story] %>.
+</p>
