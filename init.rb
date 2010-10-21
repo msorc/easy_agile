@@ -14,6 +14,7 @@ Redmine::Plugin.register :easy_agile do
   project_module :easy_agile do
     permission :easy_agile_view_iterations, :iterations => :index
     permission :easy_agile_view_home,       :iterations => :home
+    permission :easy_agile_manage_stories, :stories => [:new, :create, :show, :update]
   end
 
   Dispatcher.to_prepare do

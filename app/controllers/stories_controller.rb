@@ -1,10 +1,8 @@
 class StoriesController < ApplicationController
+  before_filter :find_optional_project
   before_filter :get_iteration, :only => [:new, :create]
   before_filter :get_story, :only => [:edit, :update, :show, :estimate]
   before_filter :new_story, :only => [:new, :create]
-
-  # update sets the current user
-  before_filter :set_current_user_on_resource
 
   def backlog
     if @project.stories.backlog.empty?
@@ -70,10 +68,8 @@ So that "
       render :template => 'stories/new_with_iteration'
     elsif @project
       render :template => 'stories/new_with_project'
-    elsif current_organisation.projects.empty?
-      render :template => 'stories/new_guidance'
     else
-      render :template => 'stories/new_without_project'
+      render :template => 'stories/new_guidance'
     end
   end
 
