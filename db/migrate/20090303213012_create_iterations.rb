@@ -4,8 +4,9 @@ class CreateIterations < ActiveRecord::Migration
       t.integer :project_id
       t.string :name
       t.integer :duration
-      t.date :started_on
-      t.date :finished_on
+      t.integer :initial_estimate
+      t.date :start_date
+      t.date :end_date
 
       t.timestamps
     end
