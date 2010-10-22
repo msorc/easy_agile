@@ -23,4 +23,12 @@ Redmine::Plugin.register :easy_agile do
   end
 
   menu :project_menu, :iterations, { :controller => 'iterations', :action => 'home' }, :caption => 'Iterations', :before => :calendar, :param => :project_id
+
+  # feature
+  Mime::Type.register "text/plain", :feature
+
+  # cretiria inflections
+  ActiveSupport::Inflector.inflections do |inflect|
+    inflect.irregular 'criterion', 'criteria'
+  end
 end

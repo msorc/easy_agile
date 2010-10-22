@@ -1,8 +1,6 @@
 class AcceptanceCriterion < ActiveRecord::Base
-  include CurrentUser
-  
   belongs_to :story
-  
+
   validates_presence_of :criterion, :story_id
 
   validates_uniqueness_of :criterion, :scope => :story_id,
