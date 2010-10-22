@@ -1,6 +1,4 @@
 class StoryTeamMember < ActiveRecord::Base
-  include CurrentUser
-
   attr_protected :user_id
   belongs_to :user
   belongs_to :story
