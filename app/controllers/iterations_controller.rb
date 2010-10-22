@@ -7,6 +7,8 @@ class IterationsController < ApplicationController
   before_filter :new_iteration, :only => [:new, :create]
   before_filter :get_stories, :only => [:edit, :new]
 
+  helper :stories
+
   def create
     @iteration.save_with_planned_stories_attributes! params[:stories]
     redirect_to [@project, @iteration]
