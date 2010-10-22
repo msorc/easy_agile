@@ -1,9 +1,8 @@
 <% content_for :title, "New Story" %>
 <% content_for :h1, "New Story" %>
 <% breadcrumbs link_to(h(@project), @project), 'New Story' %>
-<% form_for @story do |form| %>
+<% form_for @story, :url => project_stories_path do |form| %>
   <%= form.error_messages %>
-  <%= render :partial => 'stories/project_select' %>
   <%= render form %>
   <p class="submit">
   <%= form.submit 'Create Story' %>

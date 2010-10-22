@@ -39,8 +39,6 @@ class IterationsController < ApplicationController
   end
 
   def home
-    logger.info "*" * 50
-    logger.info @project
     if @project.stories.empty?
       render :template => 'iterations/home_guidance'
     end
