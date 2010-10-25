@@ -27,7 +27,7 @@
       </ul>
     <% end %>
 
-    <% unless @story.users.include?(@current_user) %>
+    <% unless @story.users.include?(User.current) %>
       <% form_for StoryTeamMember.new(:story => @story) do |f| %>
         <p class="submit">
         <%= f.hidden_field :story_id %>
