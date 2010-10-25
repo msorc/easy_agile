@@ -1,5 +1,5 @@
 class AcceptanceCriteriaController < ApplicationController
-  before_filter :get_project
+  before_filter :find_optional_project
   before_filter :get_story
   before_filter :new_acceptance_criterion, :only => :create
   before_filter :get_acceptance_criterion, :only => [:edit, :update]
@@ -39,7 +39,7 @@ class AcceptanceCriteriaController < ApplicationController
 
       if !previous_story_users_empty && @story.users.empty?
         message ||= ''
-        message << "Story team members have been removed." 
+        message << "Story team members have been removed."
       end
 
       respond_to do |format|

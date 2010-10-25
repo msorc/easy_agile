@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def breadcrumbs(*args)
-    organisation_page = 
+    organisation_page =
       if args.last.is_a?(Hash)
         then args.pop[:organisation_page]
       else true
@@ -17,7 +17,7 @@ module ApplicationHelper
       )
     end
 
-    crumbs.each_with_index do |crumb, idx| 
+    crumbs.each_with_index do |crumb, idx|
       classes = [cycle('odd', 'even')]
       classes << 'first-child' if idx == 0
       classes << 'last-child' if idx == crumbs.size - 1
@@ -29,10 +29,10 @@ module ApplicationHelper
   end
 
   def landing_stylesheet_link_tag
-    stylesheet_link_tag('reset-fonts', 
-                        'landing/layout', 
-                        'landing/typography', 
-                        'landing/colours', 
+    stylesheet_link_tag('reset-fonts',
+                        'landing/layout',
+                        'landing/typography',
+                        'landing/colours',
                         'story/layout',
                         'story/typography',
                         'story/colours',
@@ -99,7 +99,7 @@ module ApplicationHelper
 
   def google_analytics_tag(id)
     if controller.google_analytics?
-      
+
       <<JAVASCRIPT
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
