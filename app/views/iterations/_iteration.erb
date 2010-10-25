@@ -7,6 +7,7 @@
 <li class="iteration">
 <%= link_to(
   image_tag(iteration.pending? ? 'burndown.png' : iteration_burndown_path(iteration, :width => width),
+    :plugin => 'easy_agile',
     :width => width, :height => height, :alt => "Burndown chart for #{h iteration.name}"),
   [iteration.project, iteration]) %>
 <%= link_to h(iteration), [iteration.project, iteration] %>

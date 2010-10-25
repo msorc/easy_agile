@@ -14,8 +14,7 @@ class BurndownsController < ApplicationController
   protected
 
   def get_iteration
-    @iteration =
-      current_organisation.iterations.find(params[:iteration_id])
+    @iteration = Iteration.find(params[:iteration_id])
   end
 
   def get_burndown
