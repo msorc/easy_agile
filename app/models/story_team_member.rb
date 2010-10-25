@@ -9,7 +9,7 @@ class StoryTeamMember < ActiveRecord::Base
     :message => 'is already assigned to you'
 
   def validate
-    if story && !user.organisations.include?(story.project.organisation)
+    if story && !user.projects.include?(story.project)
       errors.add(:story, "must belong to one of your projects")
     end
   end
