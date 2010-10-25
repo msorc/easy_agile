@@ -3,21 +3,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
   <head>
-    <%= stylesheet_link_tag('reset-fonts', 
-                            'story/layout', 
-                            'story/typography', 
-                            'story/colours', 
-                            'iteration/layout', 
-                            'iteration/typography', 
-                            'iteration/colours', 
+    <%= stylesheet_link_tag('reset-fonts',
+                            'story/layout',
+                            'story/typography',
+                            'story/colours',
+                            'iteration/layout',
+                            'iteration/typography',
+                            'iteration/colours',
                             'iteration_planning/layout',
                             'iteration_planning/typography',
                             'iteration_planning/colours',
                             'iteration_active/layout',
                             'iteration_active/typography',
                             'iteration_active/colours',
-                            'application/layout', 
-                            'application/typography', 
+                            'application/layout',
+                            'application/typography',
                             'application/colours',
                             :cache => true) %>
     <title><%= h yield(:title) %> | Simply Agile</title>
@@ -32,12 +32,7 @@
             <li id="nav_home"><%= link_to_unless_current 'Home', home_path, :accesskey => 'h' %></li>
             <li id="nav_projects"><%= link_to_unless_current 'Projects', projects_path, :accesskey => 'p' %></li>
             <li id="nav_iterations"><%= link_to_unless_current 'Iterations', iterations_path, :accesskey => 'i' %></li>
-            <% if @current_organisation %>
-              <li id="nav_sharing">
-              <%= link_to_unless_current 'Sharing', [@current_organisation, :members], :accesskey => 's' %>
-              </li>
-            <% end %>
-            <li id="nav_account"><%= link_to_unless_current 'Account', @current_user, :accesskey => 'a' %></li>
+            <li id="nav_account"><%= link_to_unless_current 'Account', User.current, :accesskey => 'a' %></li>
           </ol>
         </div>
         <div id="breadcrumbs">
