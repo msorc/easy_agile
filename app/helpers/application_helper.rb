@@ -11,12 +11,6 @@ module ApplicationHelper
 
     crumbs_markup = ''
 
-    if @current_organisation && organisation_page
-      crumbs.unshift(
-        link_to_unless_current(h(@current_organisation), home_path)
-      )
-    end
-
     crumbs.each_with_index do |crumb, idx|
       classes = [cycle('odd', 'even')]
       classes << 'first-child' if idx == 0

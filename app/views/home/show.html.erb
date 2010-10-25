@@ -1,9 +1,4 @@
 <% content_for :title, "Home" %>
-<% content_for :h1, h("#{@current_organisation} Home") %>
-
-<% content_for :actions do %>
-  <li><%= link_to 'Organisations', organisations_path %></li>
-<% end %>
 
 <% unless @active_iterations_worked_on.empty? -%>
   <div id="recent_work" class="section_container">
