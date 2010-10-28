@@ -1,8 +1,10 @@
-class StoriesController < ApplicationController
+class StoriesController < EasyAgileCommonController
   before_filter :find_optional_project
   before_filter :get_iteration, :only => [:new, :create]
   before_filter :get_story, :only => [:edit, :update, :show, :estimate]
   before_filter :new_story, :only => [:new, :create]
+
+  helper :easy_agile
 
   def backlog
     if @project.stories.backlog.empty?

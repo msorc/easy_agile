@@ -55,10 +55,6 @@ module ApplicationHelper
     content += '</div>'
   end
 
-  def card_number(last_four_digits)
-    last_four_digits.to_s.rjust(4, '0').rjust(16, '*')
-  end
-
   def new_user_path
     url_with_https(:new_user) || super
   end
