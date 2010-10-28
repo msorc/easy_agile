@@ -8,7 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :story_team_members
 
   map.resources :projects do |project|
-    project.resources :iterations, :collection => { :home => :get } do |iteration|
+    project.resource :easy_agile, :controller => 'easy_agile', :member => { :my_page => :get }
+    project.resources :iterations do |iteration|
       iteration.resources :stories
     end
     project.resources :stories, :member => { :estimate => :get },

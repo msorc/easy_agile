@@ -40,12 +40,6 @@ class IterationsController < ApplicationController
     end
   end
 
-  def home
-    if @project.stories.empty?
-      render :template => 'iterations/home_guidance'
-    end
-  end
-
   protected
 
   def get_iterations
