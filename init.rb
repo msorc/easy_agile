@@ -13,7 +13,7 @@ Redmine::Plugin.register :easy_agile do
 
   project_module :easy_agile do
     permission :easy_agile_manage_iterations, :iterations => [:index, :new, :create, :show, :edit, :update]
-    permission :easy_agile_view_home,       :easy_agile => [:index]
+    permission :easy_agile_view_home,       :easy_agile => [:show]
     permission :easy_agile_manage_stories, :stories => [:index, :new, :create, :show, :edit, :update, :backlog]
     permission :easy_agile_manage_acceptance_criteria, :acceptance_criteria => [:create, :edit, :update, :destroy]
   end
@@ -23,7 +23,7 @@ Redmine::Plugin.register :easy_agile do
     User.send(:include, UserPatch) unless User.included_modules.include? UserPatch
   end
 
-  menu :project_menu, :easy_agile, { :controller => 'easy_agile', :action => 'index' }, :caption => 'Easy Agile', :before => :calendar, :param => :project_id
+  menu :project_menu, :easy_agile, { :controller => 'easy_agile', :action => 'show' }, :caption => 'Easy Agile', :before => :calendar, :param => :project_id
 
   # feature
   Mime::Type.register "text/plain", :feature
