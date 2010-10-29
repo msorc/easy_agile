@@ -5,6 +5,7 @@ class StoriesController < EasyAgileCommonController
   before_filter :new_story, :only => [:new, :create]
 
   helper :easy_agile
+  layout 'ea_base', :only => [:backlog]
 
   def backlog
     if @project.stories.backlog.empty?

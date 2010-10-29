@@ -1,4 +1,4 @@
-class IterationsController < ApplicationController
+class IterationsController < EasyAgileCommonController
   before_filter :find_optional_project
   before_filter :get_iterations, :only => [:index]
   before_filter :get_finished_iterations, :only => [:finished]
@@ -43,15 +43,15 @@ class IterationsController < ApplicationController
   protected
 
   def get_iterations
-    @iterations = current_organisation.iterations.active
+    @iterations = @project.iterations.active
   end
 
   def get_pending_iterations
-    @iterations = current_organisation.iterations.pending
+    @iterations = @project.iterations.pending
   end
 
   def get_finished_iterations
-    @iterations = current_organisation.iterations.finished
+    @iterations = @project.iterations.finished
   end
 
   def get_iteration

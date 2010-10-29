@@ -1,11 +1,11 @@
-class EasyAgileController < ApplicationController
+class EasyAgileController < EasyAgileCommonController
   before_filter :find_optional_project
 
   helper :stories
 
-  def index
+  def show
     if @project.stories.empty?
-      render :template => 'easy_agile/index_guidance'
+      render :template => 'easy_agile/show_guidance'
     end
   end
 
