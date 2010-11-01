@@ -5,12 +5,13 @@ class StoriesController < EasyAgileCommonController
   before_filter :new_story, :only => [:new, :create]
 
   helper :easy_agile
-  layout 'ea_base', :only => [:backlog]
+  layout 'base'
 
   def backlog
     if @project.stories.backlog.empty?
-      render :template => 'stories/backlog_guidance'
+      render :template => 'stories/backlog_guidance', :layout => 'ea_base'
     end
+    render :template => 'stories/backlog', :layout => 'ea_base'
   end
 
   def show
