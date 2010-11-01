@@ -16,8 +16,8 @@ body.stories li#nav_projects a,
 body.invoices li#nav_account a,
 body.payment_methods li#nav_account a,
 body.organisations li#nav_account a,
-body.organisation_members li#nav_sharing a { 
-  background:#ff7f2a; 
+body.organisation_members li#nav_sharing a {
+  background:#ff7f2a;
   color:#fff;
   -moz-border-radius-topleft:6px;
   -moz-border-radius-topright:6px;
@@ -26,14 +26,14 @@ body.organisation_members li#nav_sharing a {
   border-top-left-radius:6px;
   border-top-right-radius:6px;
 }
-#breadcrumbs{ 
-  background:#ff7f2a; 
+#breadcrumbs{
+  background:#ff7f2a;
   color:#fff;
 }
 
-#navigation a { 
-  background:#fff; 
-  color:#333; 
+#navigation a {
+  background:#fff;
+  color:#333;
   outline:none;
   -moz-border-radius-topright:0;
   -moz-border-radius-topleft:0;
@@ -51,10 +51,6 @@ body.organisation_members li#nav_sharing a {
 #contextual_new_story:focus,
 #stories_new #contextual_new_story { background-image:url(/images/new_story_highlight.png) }
 
-#breadcrumbs { color:#333 }
-#breadcrumbs li { background:left center url(/images/arrow_small_right_orange_background.png) no-repeat }
-#breadcrumbs li.first-child { background:none }
-#breadcrumbs li a { color:#333 }
 #footer, #footer a { color:#666 }
 
 #actions a { color:#444; display:block; background:url(/images/button_background.png) no-repeat }

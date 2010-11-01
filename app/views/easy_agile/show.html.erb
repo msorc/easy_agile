@@ -1,15 +1,9 @@
 <% content_for :title, "#{@project} | Projects" %>
-<% content_for :h1, h(@project) %>
-<% breadcrumbs h(@project) %>
-
-<%= simple_format h(@project.description) %>
+<% content_for :h2, l(:dashboard) %>
 
 <div id="backlog" class="section_container first">
-  <%= link_to h("Full #{@project} backlog"),
-    backlog_project_stories_path(@project),
-    :class => 'section' %>
   <div class="section">
-    <h2>Backlog</h2>
+    <h3>Backlog</h3>
     <% if @project.stories.backlog.empty? %>
       <p>
       This project has no backlog.
@@ -35,7 +29,7 @@
               :class => 'section')
   %>
   <div class="section">
-    <h2>Iterations</h2>
+    <h3>Iterations</h3>
     <% if (@project.iterations.active + @project.iterations.pending).empty? %>
       <div class="guidance">
       <p>
@@ -50,7 +44,7 @@
     <% else %>
       <% unless @project.iterations.active.empty? %>
         <div class="active subsection">
-          <h3>Active</h3>
+          <h4>Active</h4>
           <ol>
             <%= render @project.iterations.active, :width => 150 %>
           </ol>
@@ -58,7 +52,7 @@
       <% end %>
       <% unless @project.iterations.pending.empty? %>
         <div class="planned subsection">
-          <h3>Planned</h3>
+          <h4>Planned</h4>
           <ol>
             <%= render @project.iterations.pending, :width => 150 %>
           </ol>

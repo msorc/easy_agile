@@ -11,10 +11,10 @@
   <div class="content">
     <div class="header">
       <% if body_classes.include?('iteration_planning') %>
-        <h3><%= h(story) %></h3>
+        <h4><%= h(story) %></h4>
         <%= render :partial => 'stories/estimating_story', :object => story %>
       <% else %>
-        <h3><%= link_to h(story), [story.project, story] %></h3>
+        <h4><%= link_to h(story), [story.project, story] %></h4>
         <% if story.estimate? %>
           <p class="estimate" title="Story Points"><span>Story Points: </span><%= story.estimate %></p>
         <% end %>

@@ -20,8 +20,6 @@ legend { font-weight:bold; padding-top:2em }
 #navigation a:hover,
 #navigation a:focus { text-decoration:underline }
 
-#breadcrumbs { font-weight:bold; line-height:3em }
-
 #actions a { line-height:29px; text-align:center; text-decoration:none;
              font-weight:bold }
 

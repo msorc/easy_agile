@@ -16,5 +16,3 @@
 
 .story .content p.estimate { background:#eee; border-color:#ddd }
 
-/* don't affect breadcrumbs */
-#breadcrumbs .story { border:none }

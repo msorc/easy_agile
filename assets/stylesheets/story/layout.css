@@ -8,7 +8,7 @@ ol.stories li.story{ margin-bottom:15px }
 #content .story li{ display:block; padding:0 5px; max-width:none }
 
 #content .story .header { position:relative }
-#content .story h3 { overflow:hidden }
+#content .story h4 { overflow:hidden }
 body.iteration_active .javascript #content .story h3 { margin-right:53px }
 
 #content .story img { position:absolute; bottom:1px; right:2.4em }
@@ -23,7 +23,7 @@ body#projects_show #backlog .story .less_more { margin-right:2.4em }
 #content .story .less_more a.more { float:left }
 /* end less/more links */
 
-#content .story .estimate { margin:0; position:absolute; border-style:solid; 
+#content .story .estimate { margin:0; position:absolute; border-style:solid;
                             border-width:1px; padding:0 3px; top:3px; right:3px }
 #content .story .estimate span { display:none }
 .story ol{ clear:both }

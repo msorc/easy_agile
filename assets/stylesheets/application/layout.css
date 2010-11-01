@@ -1,66 +1,66 @@
-/* basic layout */
-#container { margin:0 0 0 0; position:relative }
-#header { width:100%; padding-bottom:5px }
-#contextual_new_story { position:absolute; width:118px; height:99px;
-                        right:30px; top:2px }
-#footer { clear:both; padding:0 0 30px 0 }
-#footer p { max-width:none }
+/* /\* basic layout *\/ */
+/* #container { margin:0 0 0 0; position:relative } */
+/* #header { width:100%; padding-bottom:5px } */
+/* #contextual_new_story { position:absolute; width:118px; height:99px; */
+/*                         right:30px; top:2px } */
+/* #footer { clear:both; padding:0 0 30px 0 } */
+/* #footer p { max-width:none } */
 
-.important_message { position:absolute; top:0; left:0; z-index:11; width:100% }
-.important_message div { margin:0 auto; width:52em; padding:4px 0 }
-.important_message p { margin:0; max-width:none }
+/* .important_message { position:absolute; top:0; left:0; z-index:11; width:100% } */
+/* .important_message div { margin:0 auto; width:52em; padding:4px 0 } */
+/* .important_message p { margin:0; max-width:none } */
 
-#errorExplanation { margin-bottom:15px }
-/* end basic layout */
+/* #errorExplanation { margin-bottom:15px } */
+/* /\* end basic layout *\/ */
 
-/* navigation */
-#navigation { height:67px; position:relative; width:30.05em }
-#header>#navigation { margin:0 auto }
-#navigation ol { position:absolute; left:0; bottom:0; height:2.5em }
-#navigation li { float:left; height:2.5em; line-height:2.5em; width:6em }
-#navigation li a { display:block; width:6em }
-/* end navigation */
+/* /\* navigation *\/ */
+/* #navigation { height:67px; position:relative; width:30.05em } */
+/* #header>#navigation { margin:0 auto } */
+/* #navigation ol { position:absolute; left:0; bottom:0; height:2.5em } */
+/* #navigation li { float:left; height:2.5em; line-height:2.5em; width:6em } */
+/* #navigation li a { display:block; width:6em } */
+/* /\* end navigation *\/ */
 
-/* javascript request */
-.javascript #request_container { position:fixed; top:140px; height:100%; width:100%; z-index:11 }
-.javascript #request { margin:0 auto; width:40%; height:60%;
-                           min-height:340px; overflow:auto; position:relative }
-.javascript #request #request_body { padding:5px 15px 0 15px }
-.javascript #request h2 { margin-top:1em }
-.javascript #request h2#request_header { margin:0; padding:5px 15px }
-.javascript #request a#close_request { position:absolute; top:5px; right:8px }
+/* /\* javascript request *\/ */
+/* .javascript #request_container { position:fixed; top:140px; height:100%; width:100%; z-index:11 } */
+/* .javascript #request { margin:0 auto; width:40%; height:60%; */
+/*                            min-height:340px; overflow:auto; position:relative } */
+/* .javascript #request #request_body { padding:5px 15px 0 15px } */
+/* .javascript #request h2 { margin-top:1em } */
+/* .javascript #request h2#request_header { margin:0; padding:5px 15px } */
+/* .javascript #request a#close_request { position:absolute; top:5px; right:8px } */
 
-.javascript #request .edit_acceptance_criterion,
-.javascript #request .edit a,
-.javascript #request .delete form,
-.javascript #request #add_to_iteration,
-.javascript #request #next_steps { display:none }
-/* end javascript request */
+/* .javascript #request .edit_acceptance_criterion, */
+/* .javascript #request .edit a, */
+/* .javascript #request .delete form, */
+/* .javascript #request #add_to_iteration, */
+/* .javascript #request #next_steps { display:none } */
+/* /\* end javascript request *\/ */
 
-/* breadcrumbs */
-#breadcrumbs { height:3em; padding-left:30px }
-#breadcrumbs li { float:left; margin-left:9px; padding-left:25px }
-#breadcrumbs li.first-child { margin-left:0; padding-left:0 }
-/* end breadcrumbs */
+/* /\* breadcrumbs *\/ */
+/* #breadcrumbs { height:3em; padding-left:30px } */
+/* #breadcrumbs li { float:left; margin-left:9px; padding-left:25px } */
+/* #breadcrumbs li.first-child { margin-left:0; padding-left:0 } */
+/* /\* end breadcrumbs *\/ */
 
 /* content */
-#content { position:relative; margin:0 30px 0 0;
-           padding:20px 0 100px 30px;
-           overflow:hidden }
+/* #content { position:relative; margin:0 30px 0 0; */
+/*            padding:20px 0 100px 30px; */
+/*            overflow:hidden } */
 #actions { position:absolute; right:0; top:20px; width:124px; z-index:20 }
 #actions li { width:104px; display:block; margin:0 auto 1em auto }
 #actions a { width:104px; height:29px }
 
-div.section { position:relative; padding:40px 36px 22px 36px; 
+div.section { position:relative; padding:40px 36px 22px 36px;
               margin:23px 0 0 11px }
 div.with_subsections div.section { padding:0 }
 form div.with_subsections div.section { padding-bottom:5px }
 form div.with_subsections div.section div.subsection { padding-left:15px }
 .section .subsection { position:relative; overflow:hidden }
-div.section h2 { position:absolute; z-index:10; top:-25px; padding:12px 23px; 
+div.section h3 { position:absolute; z-index:10; top:-25px; padding:12px 23px;
               /*ie6*/ left:-50px }
-div.section>h2 { left:-13px }
-div.section .errorExplanation h2 { position: relative; padding: 0; margin: 0;
+div.section>h3 { left:-13px }
+div.section .errorExplanation h3 { position: relative; padding: 0; margin: 0;
     top:0; left: 0 }
 
 .section_container { position:relative; overflow:hidden }
@@ -69,128 +69,128 @@ div.section .errorExplanation h2 { position: relative; padding: 0; margin: 0;
 .section_container ul.section_links li { float:left; margin-left:1em }
 /* end content */
 
-/* forms */
-form p { margin:5px 0 }
-form p.submit { margin:15px 0 }
-form p label { display:block; width:10em; float:left; line-height:1.5em }
-form p.checkbox { overflow:hidden }
-form p.checkbox input { float:left }
-form p.checkbox label { display:inline; padding-left:5px; width:20em; 
-                        line-height:1.2em }
-/* end forms */
+/* /\* forms *\/ */
+/* form p { margin:5px 0 } */
+/* form p.submit { margin:15px 0 } */
+/* form p label { display:block; width:10em; float:left; line-height:1.5em } */
+/* form p.checkbox { overflow:hidden } */
+/* form p.checkbox input { float:left } */
+/* form p.checkbox label { display:inline; padding-left:5px; width:20em;  */
+/*                         line-height:1.2em } */
+/* /\* end forms *\/ */
 
-/* home/show */
-.section_container.first { width:56%; max-width:472px; 
-                           min-width:275px; float:left; 
-                           margin-right:30px; 
+/* /\* home/show *\/ */
+.section_container.first { width:56%; max-width:472px;
+                           min-width:275px; float:left;
+                           margin-right:30px;
                            margin-bottom:30px }
-body#home_show #iterations { min-width:345px }
-body#home_show #iterations div.active { padding-top:45px }
-body#home_show #recently_finished_iterations .finished ol,
-body#home_show #iterations ol { overflow:hidden }
-body#home_show #recent_work .section { padding:0 }
-body#home_show #recent_work .section>ol>li { padding:45px 30px 15px 30px }
-body#home_show #recent_work .section>ol>li,
-body#home_show #recent_work li div.stories { overflow:hidden }
-body#home_show #recent_work li div.iteration { margin-right:30px }
-/* end home/show */
+/* body#home_show #iterations { min-width:345px } */
+/* body#home_show #iterations div.active { padding-top:45px } */
+/* body#home_show #recently_finished_iterations .finished ol, */
+/* body#home_show #iterations ol { overflow:hidden } */
+/* body#home_show #recent_work .section { padding:0 } */
+/* body#home_show #recent_work .section>ol>li { padding:45px 30px 15px 30px } */
+/* body#home_show #recent_work .section>ol>li, */
+/* body#home_show #recent_work li div.stories { overflow:hidden } */
+/* body#home_show #recent_work li div.iteration { margin-right:30px } */
+/* /\* end home/show *\/ */
 
-/* projects/show */
-body#projects_show #backlog { width:56%; float:left; margin-bottom:30px;
-                              margin-right:30px;
-                              min-width:275px; max-width:472px }
-body#projects_show #iterations { min-width:250px }
-/* end projects/show */
+/* /\* projects/show *\/ */
+/* body#projects_show #backlog { width:56%; float:left; margin-bottom:30px; */
+/*                               margin-right:30px; */
+/*                               min-width:275px; max-width:472px } */
+/* body#projects_show #iterations { min-width:250px } */
+/* /\* end projects/show *\/ */
 
-/* iterations/index */
-body#iterations_index .active,
-body#iterations_planned .planned,
-body#iterations_finished .finished { padding:45px 30px 30px 30px;
-                                     overflow:hidden }
-/* end iterations/index */
+/* /\* iterations/index *\/ */
+/* body#iterations_index .active, */
+/* body#iterations_planned .planned, */
+/* body#iterations_finished .finished { padding:45px 30px 30px 30px; */
+/*                                      overflow:hidden } */
+/* /\* end iterations/index *\/ */
 
-/* stories/show */
-body#stories_show #users { width:20em }
-body#stories_show #users ul { overflow:hidden }
-body#stories_show #users a { float:left; clear:left }
-body#stories_show #users form.button-to { float:right }
-body#stories_show h2 { margin:1em 0 0 0 }
-body#stories_show #acceptance_criteria table { width:40%; margin-top:1em }
-body#stories_show #acceptance_criteria table tr { vertical-align:top }
-body#stories_show #acceptance_criteria table td { padding:0 5px }
-body#stories_show #acceptance_criteria table td.edit,
-body#stories_show #acceptance_criteria table td.delete { width:4em }
-body#stories_show #acceptance_criteria table td.complete { width:1em }
+/* /\* stories/show *\/ */
+/* body#stories_show #users { width:20em } */
+/* body#stories_show #users ul { overflow:hidden } */
+/* body#stories_show #users a { float:left; clear:left } */
+/* body#stories_show #users form.button-to { float:right } */
+/* body#stories_show h2 { margin:1em 0 0 0 } */
+/* body#stories_show #acceptance_criteria table { width:40%; margin-top:1em } */
+/* body#stories_show #acceptance_criteria table tr { vertical-align:top } */
+/* body#stories_show #acceptance_criteria table td { padding:0 5px } */
+/* body#stories_show #acceptance_criteria table td.edit, */
+/* body#stories_show #acceptance_criteria table td.delete { width:4em } */
+/* body#stories_show #acceptance_criteria table td.complete { width:1em } */
 
-body#stories_show .javascript #acceptance_criteria table .submit_complete { display:none }
-body#stories_show #acceptance_criteria form { display:inline }
-/* end stories/show */
+/* body#stories_show .javascript #acceptance_criteria table .submit_complete { display:none } */
+/* body#stories_show #acceptance_criteria form { display:inline } */
+/* /\* end stories/show *\/ */
 
-/* stories/backlog */
-body#stories_backlog .javascript #content p.submit,
-body#stories_backlog .javascript #content label,
-body#stories_backlog .javascript #content input { display:none }
-/* end stories/backlog */
+/* /\* stories/backlog *\/ */
+/* body#stories_backlog .javascript #content p.submit, */
+/* body#stories_backlog .javascript #content label, */
+/* body#stories_backlog .javascript #content input { display:none } */
+/* /\* end stories/backlog *\/ */
 
-/* organisations/index and payment_methods/index */
-body#payment_methods_index #content ol>li,
-body#organisations_index #content ol>li { width:49%; float:left; 
-                                          min-width:38em;
-                                          height:26em; overflow:auto;
-                                          margin-bottom:30px }
-body#payment_methods_index #content ol>li .section_container,
-body#organisations_index #content ol>li .section_container { margin-right:30px }
-/* end organisations/index and payment_methods/index */
+/* /\* organisations/index and payment_methods/index *\/ */
+/* body#payment_methods_index #content ol>li, */
+/* body#organisations_index #content ol>li { width:49%; float:left;  */
+/*                                           min-width:38em; */
+/*                                           height:26em; overflow:auto; */
+/*                                           margin-bottom:30px } */
+/* body#payment_methods_index #content ol>li .section_container, */
+/* body#organisations_index #content ol>li .section_container { margin-right:30px } */
+/* /\* end organisations/index and payment_methods/index *\/ */
 
-/* organisations/new */
-form#new_organisation { width:55em  }
-form#new_organisation p#free_trial { max-width:none }
-form#new_organisation ol { 
-  border-style:solid; overflow:hidden; border-width:1px 
-}
-form#new_organisation ol li { 
-  width:33.3%; display:block; float:left
-}
-form#new_organisation ol li label { 
-  padding:15px 0 5px 0;
-  height:6.5em;
-  display:block; margin:0 auto 
-}
-form#new_organisation ol li label span { 
-  display:block; clear:left
-}
-form#new_organisation ol li ul.limits { overflow:hidden; 
-                                                 margin-bottom:1em }
-form#new_organisation ol li ul.limits, 
-form#new_organisation ol li div.description { margin-top:1em }
-/* end organisations/new */
+/* /\* organisations/new *\/ */
+/* form#new_organisation { width:55em  } */
+/* form#new_organisation p#free_trial { max-width:none } */
+/* form#new_organisation ol {  */
+/*   border-style:solid; overflow:hidden; border-width:1px  */
+/* } */
+/* form#new_organisation ol li {  */
+/*   width:33.3%; display:block; float:left */
+/* } */
+/* form#new_organisation ol li label {  */
+/*   padding:15px 0 5px 0; */
+/*   height:6.5em; */
+/*   display:block; margin:0 auto  */
+/* } */
+/* form#new_organisation ol li label span {  */
+/*   display:block; clear:left */
+/* } */
+/* form#new_organisation ol li ul.limits { overflow:hidden;  */
+/*                                                  margin-bottom:1em } */
+/* form#new_organisation ol li ul.limits,  */
+/* form#new_organisation ol li div.description { margin-top:1em } */
+/* /\* end organisations/new *\/ */
 
-/* organisations/show */
-body.organisation_members table { table-layout:fixed; width:50em; margin-bottom:2em }
-/* end organisations/show */
+/* /\* organisations/show *\/ */
+/* body.organisation_members table { table-layout:fixed; width:50em; margin-bottom:2em } */
+/* /\* end organisations/show *\/ */
 
-/* payment_methods/new */
-form#new_payment_method { width:60em; position:relative }
-form#new_payment_method #errorExplanation { position:absolute; left:35em;
-                                            top:2em }
-form#new_payment_method .section { width:32em }
-#payment_method_billing_address_attributes_country { width:18em }
-/* end payment_methods/new */
+/* /\* payment_methods/new *\/ */
+/* form#new_payment_method { width:60em; position:relative } */
+/* form#new_payment_method #errorExplanation { position:absolute; left:35em; */
+/*                                             top:2em } */
+/* form#new_payment_method .section { width:32em } */
+/* #payment_method_billing_address_attributes_country { width:18em } */
+/* /\* end payment_methods/new *\/ */
 
-/* invoices/index */
-body#invoices_index table th,
-body#invoices_index table td{ padding:0 2em 0 0 }
-/* end invoices/index */
+/* /\* invoices/index *\/ */
+/* body#invoices_index table th, */
+/* body#invoices_index table td{ padding:0 2em 0 0 } */
+/* /\* end invoices/index *\/ */
 
-/* invoices/show */
-body#invoices_show #description,
-body#invoices_show #seller,
-body#invoices_show #customer,
-body#invoices_show #date,
-body#invoices_show #payment_method { margin-bottom:1em; overflow:hidden }
-body#invoices_show #seller,
-body#invoices_show #date { float:left; width:24em }
-body#invoices_show #item { clear:left }
-body#invoices_show #content h3 { float:left; width:13em }
-body#invoices_show #content h2+h3 { margin:1em 0 }
-/* end invoices/show */
+/* /\* invoices/show *\/ */
+/* body#invoices_show #description, */
+/* body#invoices_show #seller, */
+/* body#invoices_show #customer, */
+/* body#invoices_show #date, */
+/* body#invoices_show #payment_method { margin-bottom:1em; overflow:hidden } */
+/* body#invoices_show #seller, */
+/* body#invoices_show #date { float:left; width:24em } */
+/* body#invoices_show #item { clear:left } */
+/* body#invoices_show #content h3 { float:left; width:13em } */
+/* body#invoices_show #content h2+h3 { margin:1em 0 } */
+/* /\* end invoices/show *\/ */
