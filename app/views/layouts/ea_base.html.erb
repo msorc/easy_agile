@@ -3,10 +3,10 @@
 <%= stylesheet_link_tag(
                         'story/layout',
                         'story/colours',
-
+                        'story/typography',
                         'application/layout',
                         'application/colours',
-
+                        'application/typography',
                         :cache => false, :plugin => 'easy_agile') %>
 <% end %>
 
@@ -29,15 +29,18 @@
   </div>
 </div>
 
-<h2><%= yield(:h2) %></h2>
-<% unless yield(:actions).blank? %>
-  <ul id="actions">
-    <%= yield :actions %>
-  </ul>
-<% end %>
+
 <div class="ea_body <%= body_classes.join(' ') %>"
      id="<%= "#{controller.try(:tab_name) || controller.controller_name}_#{controller.action_name}" %>">
   <div class="ea_container">
+
+    <h2><%= yield(:h2) %></h2>
+    <% unless yield(:actions).blank? %>
+      <ul id="actions">
+        <%= yield :actions %>
+      </ul>
+    <% end %>
+
     <%= yield %>
   </div>
 </div>

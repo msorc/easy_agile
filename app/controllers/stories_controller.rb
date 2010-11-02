@@ -10,6 +10,7 @@ class StoriesController < EasyAgileCommonController
   def backlog
     if @project.stories.backlog.empty?
       render :template => 'stories/backlog_guidance', :layout => 'ea_base'
+      return
     end
     render :template => 'stories/backlog', :layout => 'ea_base'
   end

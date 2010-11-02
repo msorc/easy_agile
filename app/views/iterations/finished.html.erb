@@ -2,8 +2,8 @@
 <% content_for :h1, "Finished Iterations" %>
 <% breadcrumbs 'Finished Iterations' %>
 <% content_for :actions do %>
-  <li><%= link_to "Active", iterations_path %></li>
-  <li><%= link_to "Planned", planned_iterations_path %></li>
+  <li><%= link_to "Active", project_iterations_path %></li>
+  <li><%= link_to "Planned", planned_project_iterations_path %></li>
 <% end %>
 
 <% if @iterations.empty? -%>

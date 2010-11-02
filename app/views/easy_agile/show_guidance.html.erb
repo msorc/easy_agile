@@ -1,8 +1,5 @@
 <% content_for :title, "#{@project} | Projects" %>
 <% content_for :h1, h(@project) %>
-<% content_for :actions do %>
-<li><%= link_to "Edit", edit_project_path(@project) %></li>
-<% end %>
 <% breadcrumbs h(@project) %>
 <% body_classes << 'guidance' %>
 

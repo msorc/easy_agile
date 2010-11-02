@@ -12,7 +12,7 @@ Redmine::Plugin.register :easy_agile do
   author_url 'http://example.com/about'
 
   project_module :easy_agile do
-    permission :easy_agile_manage_iterations, :iterations => [:index, :new, :create, :show, :edit, :update]
+    permission :easy_agile_manage_iterations, :iterations => [:index, :new, :create, :show, :edit, :update, :planned, :finished]
     permission :easy_agile_view_home,       :easy_agile => [:show]
     permission :easy_agile_manage_stories, :stories => [:index, :new, :create, :show, :edit, :update, :backlog]
     permission :easy_agile_manage_acceptance_criteria, :acceptance_criteria => [:create, :edit, :update, :destroy]

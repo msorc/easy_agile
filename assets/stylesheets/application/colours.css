@@ -44,16 +44,16 @@
 /* } */
 /* /\* end navigation *\/ */
 
-/* #contextual_new_story { background:url(/images/new_story.png) no-repeat; */
+/* #contextual_new_story { background:url(/plugin_assets/easy_agile/images/new_story.png) no-repeat; */
 /*                         outline:none; */
 /*                         text-indent:-2000000px; text-decoration:none } */
 /* #contextual_new_story:hover, */
 /* #contextual_new_story:focus, */
-/* #stories_new #contextual_new_story { background-image:url(/images/new_story_highlight.png) } */
+/* #stories_new #contextual_new_story { background-image:url(/plugin_assets/easy_agile/images/new_story_highlight.png) } */
 
 /* #footer, #footer a { color:#666 } */
 
-/* #actions a { color:#444; display:block; background:url(/images/button_background.png) no-repeat } */
+#actions a { color:#444; display:block; background:url(/plugin_assets/easy_agile/images/button_background.png) no-repeat }
 
 div.section, div.section h3 { border:2px solid #e4e5f3 }
 div.section .errorExplanation h3 { border: none }
@@ -74,13 +74,3 @@ div.section h3 { background:#fff }
 /* body#home_show #recent_work .section>ol>li:last-child { border:none } */
 /* /\* end home/show *\/ */
 
-/* /\* organisations/index *\/ */
-/* body#organisations_index ol li.suspended { opacity:0.5 } */
-/* /\* end organisations/index *\/ */
-
-/* /\* organisations/new *\/ */
-/* form#new_organisation ol { border-color:#999 } */
-/* form#new_organisation ol li#plan_0 label { background:#ccc } */
-/* form#new_organisation ol li#plan_1 label { background:#ddd } */
-/* form#new_organisation ol li#plan_2 label { background:#eee } */
-/* /\* end organisations/new *\/ */
