@@ -40,7 +40,7 @@ Story.setStatus = function(element, status) {
 Story.prototype = {
   createContainer: function() {
     this.element.find('.less_more').remove();
-    this.element.find('h3').before('<div class="less_more"></div>');
+    this.element.find('.story_header h4').before('<div class="less_more"></div>');
     this.container = this.element.find('.less_more');
   },
 
@@ -51,7 +51,7 @@ Story.prototype = {
       .append('<a class="more" href="#more">More »</a>')
 
       .find('a.more').click(function() {
-        instance.acceptance_criteria.toggle();    
+        instance.acceptance_criteria.toggle();
         instance.setMoreHtml();
         return false;
       });
@@ -63,7 +63,7 @@ Story.prototype = {
   setMoreHtml: function() {
     var html;
 
-    if (this.acceptance_criteria.is(':visible')) { 
+    if (this.acceptance_criteria.is(':visible')) {
       html = '« Less'
       this.less.hide();
     } else if (!this.story_content.is(':visible')) {

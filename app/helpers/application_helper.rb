@@ -34,9 +34,9 @@ module ApplicationHelper
   end
 
   def javascript_includes
-    javascript_include_tag('jquery-1.3.2.min',
-                           'jquery-ui-1.7.custom.min',
-                           'jquery.form',
+    javascript_include_tag('jquery-1.3.2.min.js',
+                           'jquery-ui-1.7.custom.min.js',
+                           'jquery.form.js',
                            'application',
                            'flash',
                            'story',
@@ -46,7 +46,8 @@ module ApplicationHelper
                            'iteration_planning',
                            'iteration_active',
                            'backlog_prioritisation',
-                           :cache => true)
+                           :plugin => 'easy_agile',
+                           :cache => false)
   end
 
   def next_steps(&block)

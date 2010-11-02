@@ -3,11 +3,11 @@ body.iteration_planning ol.stories { overflow:visible }
 ol.stories li.story{ margin-bottom:15px }
 
 #content .story{ height:100%; max-width:400px; position:relative }
-#content .story .content { border-width:1px; border-style:solid }
+#content .story .story_content { border-width:1px; border-style:solid }
 #content .story ol, .story ul{ margin:4px 0 0 0 }
 #content .story li{ display:block; padding:0 5px; max-width:none }
 
-#content .story .header { position:relative }
+#content .story .story_header { position:relative }
 #content .story h4 { overflow:hidden }
 body.iteration_active .javascript #content .story h3 { margin-right:53px }
 

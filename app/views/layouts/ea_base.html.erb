@@ -2,15 +2,12 @@
 <% content_for :header_tags do %>
 <%= stylesheet_link_tag(
                         'story/layout',
-
+                        'story/colours',
 
                         'application/layout',
                         'application/colours',
 
                         :cache => false, :plugin => 'easy_agile') %>
-<% unless request.user_agent.include?('iPhone') %>
-  <%= javascript_includes %>
-<% end %>
 <% end %>
 
 <% selected_tab = controller.tab_name %>
@@ -45,5 +42,7 @@
   </p>
 <% end %>
 <%= render :partial => 'shared/footer' %>
-
+<% unless request.user_agent.include?('iPhone') %>
+  <%= javascript_includes %>
+<% end %>
 <% end %>

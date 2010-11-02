@@ -8,8 +8,8 @@
     </div>
   <% end %>
 
-  <div class="content">
-    <div class="header">
+  <div class="story_content">
+    <div class="story_header">
       <% if body_classes.include?('iteration_planning') %>
         <h4><%= h(story) %></h4>
         <%= render :partial => 'stories/estimating_story', :object => story %>
