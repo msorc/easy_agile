@@ -2,11 +2,11 @@
 <% content_for :header_tags do %>
 <%= stylesheet_link_tag(
                         'story/layout',
-                        'story/typography',
-                        'story/colours',
+
+
                         'application/layout',
-                        'application/typography',
                         'application/colours',
+
                         :cache => false, :plugin => 'easy_agile') %>
 <% unless request.user_agent.include?('iPhone') %>
   <%= javascript_includes %>
