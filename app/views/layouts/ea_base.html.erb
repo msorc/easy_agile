@@ -35,7 +35,12 @@
     <%= yield :actions %>
   </ul>
 <% end %>
-<%= yield %>
+<div class="ea_body <%= body_classes.join(' ') %>"
+     id="<%= "#{controller.try(:tab_name) || controller.controller_name}_#{controller.action_name}" %>">
+  <div class="ea_container">
+    <%= yield %>
+  </div>
+</div>
 <% content_for :footer do %>
   <p>
     <%= link_to 'Keyboard Shortcuts', keyboard_shortcuts_path, :accesskey => 'k' %>

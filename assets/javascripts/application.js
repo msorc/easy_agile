@@ -13,9 +13,9 @@ $(document).ready(function() {
     $('.important_message')
       .css({position: 'absolute', textAlign: 'center', opacity:0.9});
     $('.important_message div')
-      .css({width:'auto', 
+      .css({width:'auto',
             margin:0});
-    return false; 
+    return false;
   }
   $('#container').addClass('javascript');
 
@@ -25,28 +25,28 @@ $(document).ready(function() {
   else $('.auto_focus').focus();
 
   // stories/show
-  if ($('body#stories_show')) AcceptanceCriteria.init();
+  if ($('div#stories_show')) AcceptanceCriteria.init();
 
   // iterations/new
   if ($('#stories_available')[0]) {
     // start swapper
     StorySwapper.init();
-    
+
     // AJAXy story adding
     new NewStoryAdder();
   }
 
   // iterations/show when active
-  if ($('body').hasClass('iteration_active')) {
+  if ($('div').hasClass('iteration_active')) {
     new DraggableStories();
     // don't enhance stories
-  } else if (!$('body#home_show')[0]) {
+  } else if (!$('div#home_show')[0]) {
     // normal story enhancements
     $('#content .story').each( function() { new Story(this) });
   }
-  
+
   // backlog
-  if ($('body#stories_backlog')[0]) {
+  if ($('div#stories_backlog')[0]) {
     BacklogPrioritisation.init();
   }
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
 Array.prototype.compare = function(testArr) {
   if (this.length != testArr.length) return false;
     for (var i = 0; i < testArr.length; i++) {
-      if (this[i].compare) { 
+      if (this[i].compare) {
         if (!this[i].compare(testArr[i])) return false;
       }
       if (this[i] !== testArr[i]) return false;
@@ -65,8 +65,8 @@ Array.prototype.compare = function(testArr) {
 }
 
 // add header to AJAX requests to play nice with Rails' content negotiation
-jQuery.ajaxSetup({ 
+jQuery.ajaxSetup({
   'beforeSend': function(xhr) {
     xhr.setRequestHeader("Accept", "text/javascript")
-  } 
+  }
 });

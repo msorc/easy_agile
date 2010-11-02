@@ -79,7 +79,7 @@ div.section .errorExplanation h3 { position: relative; padding: 0; margin: 0;
 /*                         line-height:1.2em } */
 /* /\* end forms *\/ */
 
-/* /\* home/show *\/ */
+/* home/show */
 .section_container.first { width:56%; max-width:472px;
                            min-width:275px; float:left;
                            margin-right:30px;
@@ -126,11 +126,11 @@ div.section .errorExplanation h3 { position: relative; padding: 0; margin: 0;
 /* body#stories_show #acceptance_criteria form { display:inline } */
 /* /\* end stories/show *\/ */
 
-/* /\* stories/backlog *\/ */
-/* body#stories_backlog .javascript #content p.submit, */
-/* body#stories_backlog .javascript #content label, */
-/* body#stories_backlog .javascript #content input { display:none } */
-/* /\* end stories/backlog *\/ */
+/* stories/backlog */
+div#stories_backlog .javascript #story_content p.submit,
+div#stories_backlog .javascript #story_content label,
+div#stories_backlog .javascript #story_content input { display:none }
+/* end stories/backlog */
 
 /* /\* organisations/index and payment_methods/index *\/ */
 /* body#payment_methods_index #content ol>li, */
