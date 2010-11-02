@@ -127,9 +127,9 @@ div.section .errorExplanation h3 { position: relative; padding: 0; margin: 0;
 /* /\* end stories/show *\/ */
 
 /* stories/backlog */
-div#stories_backlog .javascript #story_content p.submit,
-div#stories_backlog .javascript #story_content label,
-div#stories_backlog .javascript #story_content input { display:none }
+div#stories_backlog .ea_container.javascript p.submit,
+div#stories_backlog .javascript .story label,
+div#stories_backlog .javascript .story input { display:none }
 /* end stories/backlog */
 
 /* /\* organisations/index and payment_methods/index *\/ */
@@ -140,7 +140,7 @@ div#stories_backlog .javascript #story_content input { display:none }
 /*                                           margin-bottom:30px } */
 /* body#payment_methods_index #content ol>li .section_container, */
 /* body#organisations_index #content ol>li .section_container { margin-right:30px } */
-/* /\* end organisations/index and payment_methods/index *\/ */
+p/* /\* end organisations/index and payment_methods/index *\/ */
 
 /* /\* organisations/new *\/ */
 /* form#new_organisation { width:55em  } */

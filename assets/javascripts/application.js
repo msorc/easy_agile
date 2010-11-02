@@ -17,7 +17,7 @@ $(document).ready(function() {
             margin:0});
     return false;
   }
-  $('#container').addClass('javascript');
+  $('div.ea_container').addClass('javascript');
 
   // highlight first erroneous field / auto focus field
   var first_error_field = $('.field_with_errors')[0];
