@@ -1,12 +1,11 @@
 <% content_for :title, "New iteration for #{@project}" %>
-<% content_for :h1, "No available stories for #{h(@project)}" %>
-<% breadcrumbs link_to(h(@project), @project), 'New Iteration' %>
+<% content_for :h2, "No available stories for #{h(@project)}" %>
 <% body_classes << 'guidance' %>
 
 <p>
 There are no available stories for this project, so you can't plan an iteration.
 </p>
 <p>
-You might want to 
+You might want to
 <%= link_to 'create a story for this project', new_project_story_path(@project) %>.
 </p>

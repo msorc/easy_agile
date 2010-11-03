@@ -1,10 +1,5 @@
 <% content_for :title, "Planning iteration #{@iteration}" %>
-<% content_for :h1, "Planning iteration #{h(@iteration)}" %>
-<% breadcrumbs(
-  link_to(h(@project), @project),
-  link_to(h(@iteration), [@project, @iteration]),
-  'Re-plan'
-) %>
+<% content_for :h2, "Planning iteration #{h(@iteration)}" %>
 <% body_classes << 'iteration_planning' %>
 
 <% form_for [@project, @iteration] do |form| %>

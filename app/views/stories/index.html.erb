@@ -1,7 +1,5 @@
 <% content_for :title, "#{@project} Stories" %>
-<% content_for :h1, h("#{@project} Stories") %>
-<% breadcrumbs link_to(h(@project), @project), 'Stories' %>
-
+<% content_for :h2, h("#{@project} Stories") %>
 <% unless @project.stories.empty? %>
   <ol>
     <% @project.stories.each do |story| %>

@@ -1,22 +1,6 @@
 en:
   activerecord:
     attributes:
-      billing_address:
-        address_line_1: "Line 1"
-        address_line_2: "Line 2 (optional)"
-        county: "County (optional)"
-      organisation:
-        name: "Organisation name"
-      payment_method:
-        verification_value: "Security code"
-        number: "Card number"
-        month: "Expiry month"
-        year: "Expiry year"
-        billing_address_address_line_1: "Billing address line 1"
-        billing_address_address_line_2: "Billing address line 2"
-        billing_address_town: "Town"
-        billing_address_telephone_number: "Telephone number"
-        billing_address_postcode: "Postcode"
       story:
         content: "Story content"
     errors:
@@ -33,23 +17,8 @@ en:
           attributes:
             stories:
               not_estimated: "must have some story points (estimations). You should re-plan this iteration and add story points."
-        organisation:
-          attributes:
-            payment_plan_id:
-              blank: "must be selected"
-            suspended:
-              exclusion: "organisation"
-        organisation_member:
-          attributes:
-            user_id:
-              taken: "is already a member of this organisation"
-              blank: "email address is invalid"
-        payment_method:
-          attributes:
-            base:
-              credit_card_rejected: "details were rejected by the bank. Please check them and try again."
       template:
         header:
-          one: "Error" 
+          one: "Error"
           other: "{{count}} errors"
         body: ""

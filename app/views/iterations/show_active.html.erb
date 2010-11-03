@@ -1,6 +1,5 @@
 <% content_for :title, "#{@iteration}" %>
-<% content_for :h1, h(@iteration) %>
-<% breadcrumbs link_to(h(@iteration.project), @iteration.project), h(@iteration) %>
+<% content_for :h2, h(@iteration) %>
 <% body_classes << 'iteration_active' %>
 
 <div id="stories">
@@ -11,14 +10,14 @@
 </div>
 
 <div id="burndown">
-  <%= image_tag(iteration_burndown_path(@iteration, :width => 350), 
+  <%= image_tag(iteration_burndown_path(@iteration, :width => 350),
                 :alt => 'Burndown Chart',
                 :width => 350) %>
   <p id="time_remaining">
   <% if @iteration.finished? %>
   This iteration finished on <%= l @iteration.end_date %>.
   <% else %>
-  This iteration ends in <%= pluralize @iteration.days_remaining, 'day' %> 
+  This iteration ends in <%= pluralize @iteration.days_remaining, 'day' %>
   on <%= l @iteration.end_date %>.
   <% end %>
   </p>

@@ -1,6 +1,5 @@
 <% content_for :title, "#{@project} | Projects" %>
-<% content_for :h1, h(@project) %>
-<% breadcrumbs h(@project) %>
+<% content_for :h2, h(@project) %>
 <% body_classes << 'guidance' %>
 
 <%= simple_format h(@project.description) %>

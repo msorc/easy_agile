@@ -1,10 +1,5 @@
 <% content_for :title, "New Story" %>
-<% content_for :h1, "New Story" %>
-<% breadcrumbs(
-  link_to(h(@iteration.project), @iteration.project),
-  link_to(h(@iteration), [@project, @iteration]),
-  'New Story'
-) %>
+<% content_for :h2, "New Story" %>
 <% form_for @story do |form| %>
   <%= form.error_messages %>
   <%= render :partial => 'stories/project_select' %>
