@@ -10,7 +10,7 @@
 </div>
 
 <div id="burndown">
-  <%= image_tag(project_iteration_burndown_path(@iteration, :width => 350),
+  <%= image_tag(project_iteration_burndown_path(@project, @iteration, :width => 350),
                 :alt => 'Burndown Chart',
                 :width => 350) %>
   <p id="time_remaining">
