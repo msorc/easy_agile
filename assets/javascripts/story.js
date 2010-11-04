@@ -33,7 +33,7 @@ Story.setStatus = function(element, status) {
   var img = element.find('img').remove();
 
   if (status == 'in_progress' || status == 'testing') {
-    var html = '<img src="/images/fella_'+status+'.gif" alt="" />';
+    var html = '<img src="/plugin_assets/easy_agile/images/fella_'+status+'.gif" alt="" />';
     element.find('.story_header').append(html);
   }
 }

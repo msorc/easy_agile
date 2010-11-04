@@ -1,7 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resources :keyboard_shortcuts
-  map.resources :story_team_members
 
   map.resources :projects do |project|
     project.resource :easy_agile, :controller => 'easy_agile', :member => { :my_page => :get }
@@ -16,6 +15,8 @@ ActionController::Routing::Routes.draw do |map|
     :collection => { :backlog => :get, :finished => :get }  do |story|
       story.resources :acceptance_criteria
     end
+
+    project.resources :story_team_members
   end
 
   map.resource :home, :controller => 'home'

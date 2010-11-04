@@ -16,6 +16,7 @@ Redmine::Plugin.register :easy_agile do
     permission :easy_agile_view_home,       :easy_agile => [:show]
     permission :easy_agile_manage_stories, :stories => [:index, :new, :create, :show, :edit, :update, :backlog]
     permission :easy_agile_manage_acceptance_criteria, :acceptance_criteria => [:create, :edit, :update, :destroy]
+    permission :easy_agile_manage_story_team_members, :story_team_members => [:create, :destroy]
   end
 
   Dispatcher.to_prepare do

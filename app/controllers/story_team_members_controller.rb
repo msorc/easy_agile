@@ -1,6 +1,9 @@
 class StoryTeamMembersController < ApplicationController
+  before_filter :find_optional_project
   before_filter :new_story_team_member, :only => [:create]
   before_filter :get_story_team_member, :only => [:destroy]
+
+  helper :stories
 
   def create
     if @story_team_member.save
