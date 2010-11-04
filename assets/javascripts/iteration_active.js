@@ -8,7 +8,9 @@ var Burndown = {
     var location_parts, iteration_id;
     location_parts = location.href.split('/');
     iteration_id = location_parts[location_parts.length - 1];
+    project_id = location_parts[location_parts.length - 3];
     $('#burndown img').attr('src',
+                            '/projects/' + project_id +
                             '/iterations/' + iteration_id +
                             '/burndown?width=350&' + new Date().getTime());
   }
@@ -106,13 +108,14 @@ DraggableStories.refresh = function() {
   $.getJSON(url,
     function(stories) {
       statuses = $.map(stories, function(obj) {
-        return obj.story.status;
+        return obj.status;
       });
       if (!DraggableStories.statuses.compare(statuses)) {
         DraggableStories.statuses = statuses;
         $(stories).each( function(i) {
           draggable_story = DraggableStories.draggables[i];
-          draggable_story.story = this.story;
+          draggable_story.story.id = this.id;
+          draggable_story.story.status = this.status;
           draggable_story.setStatus();
           draggable_story.setPosition();
         });

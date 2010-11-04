@@ -34,7 +34,7 @@ Story.setStatus = function(element, status) {
 
   if (status == 'in_progress' || status == 'testing') {
     var html = '<img src="/images/fella_'+status+'.gif" alt="" />';
-    element.find('.header').append(html);
+    element.find('.story_header').append(html);
   }
 }
 Story.prototype = {
