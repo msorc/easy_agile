@@ -21,7 +21,7 @@ function DraggableStories() {
   DraggableStories.create();
 
   // handle resize event
-  $(window).resize(function() { 
+  $(window).resize(function() {
     DraggableStories.create();
     DraggableStories.recently_resized = true;
     setTimeout('DraggableStories.recently_resized = false', 100);
@@ -59,17 +59,17 @@ DraggableStories.create = function() {
   });
 
   // make droppables for each radio button
-  DraggableStories.droppables = $.map($('input[name="story[status]"]'), function(input, i) { 
+  DraggableStories.droppables = $.map($('input[name="story[status]"]'), function(input, i) {
     return new DroppableStatus(input);
   });
 
   DraggableStories.draggables = $.map($('input[name="story[status]"]:checked'), function(input, i) {
-    return new DraggableStory(input); 
+    return new DraggableStory(input);
   });
-  
+
   // set height of each row to the height of the draggable content
   $('.draggables').each( function() {
-    height = $(this).find('.story .content').height() + 9;
+    height = $(this).find('.story .story_content').height() + 9;
 
     $(this).height(height);
     $(this).find('.ui-droppable').height(height);
@@ -147,14 +147,14 @@ function DraggableStory(input) {
   this.input = input;
   id_parts = this.input.id.split('_');
 
-  this.story = { 
+  this.story = {
     'id': id_parts[id_parts.length - 1],
     'status': $(input).val()
   }
 
   objects = new objectsFromInput(input);
 
-  content = objects.li.find('.content');
+  content = objects.li.find('.story_content');
   acceptance_criteria = objects.li.find('.acceptance_criteria');
   container = objects.container;
 
@@ -169,21 +169,21 @@ function DraggableStory(input) {
 
   container.append('<div class="'+classes+'" id="draggable_'+
       this.input.id+
-      '"><div class="content">'+
+      '"><div class="story_content">'+
       content.html()+
       '</div></div>');
 
   this.element = $('#draggable_' + this.input.id);
 
   if (acceptance_criteria[0]) {
-    this.element.find('.content').append('<div class="acceptance_criteria">'+
+    this.element.find('.story_content').append('<div class="acceptance_criteria">'+
         acceptance_criteria.html()+
         '</div>');
   }
 
-  this.element.draggable({ 
+  this.element.draggable({
       revert: 'invalid',
-      axis: 'x', 
+      axis: 'x',
       containment: 'parent',
       cursor: 'pointer'
     })
@@ -222,8 +222,8 @@ function DroppableStatus(input) {
 
   this.droppable = $('#droppable_' + input.id);
   this.droppable
-    .droppable({ 
-      drop: function(ev, ui) { 
+    .droppable({
+      drop: function(ev, ui) {
         var id_parts = instance.input.id.split('_');
         var story_id = id_parts[id_parts.length - 1];
 
@@ -242,7 +242,7 @@ function DroppableStatus(input) {
             DraggableStories.refresh_lock = false;
           }
         });
-        
+
         // change class of elements
         var draggable = instance.container.find('.ui-draggable');
         Story.setStatus(draggable, instance.status);
@@ -252,7 +252,7 @@ function DroppableStatus(input) {
           .css('left', $(this).position().left)
           .css('top', $(this).position().top);
       }
-    }); 
+    });
 }
 
 DroppableStatus.previous_statuses = {};

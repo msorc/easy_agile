@@ -30,32 +30,13 @@ div.section div.subsection h3 { text-align:right; font-size:123.1%;
                                 padding:7px 10px 15px 0 }
 
 /* iterations/new */
-body.iterations .include a { text-indent:-20000px; outline:none; text-underline:none }
-body.iterations .display h3 { font-weight:bold }
+div.iterations .include a { text-indent:-20000px; outline:none; text-underline:none }
+div.iterations .display h3 { font-weight:bold }
 .javascript #request_container { text-align:left }
 .javascript #stories span.estimate { text-align:center }
 /* end iterations/new */
 
 /* iterations/show */
-body#iterations_show .javascript #stories .guidance,
-body#iterations_show .javascript #headings ol li { text-align:center }
+div#iterations_show .javascript #stories .guidance,
+div#iterations_show .javascript #headings ol li { text-align:center }
 /* end iterations/show */
-
-/* organisations/index */
-body#organisations_index li.organisation h3 { margin-top:1em }
-/* end organisations/index */
-
-/* organisations/new */
-form#new_organisation h2 { margin-top:2em }
-form#new_organisation .numeric,
-form#new_organisation ol li { text-align:center }
-form#new_organisation ol li#plan_0 label span.name { font-size:138.5% }
-form#new_organisation ol li#plan_1 label span.name { font-size:161.6% }
-form#new_organisation ol li#plan_2 label span.name { font-size:182% }
-form#new_organisation ol li label span.numeric { font-size:123.1% }
-#free_trial { font-size: 123.1%; text-align: center; }
-/* end organisations/new */
-
-/* invoices/show */
-body#invoices_show #content h3 { font-weight:bold }
-/* end invoices/show */

@@ -1,7 +1,7 @@
-.draggables .pending .header { border-color:#ddd }
-.draggables .in_progress .header { border-color:#3dc0fd }
-.draggables .testing .header { border-color:#fde03d }
-.draggables .complete .header { border-color:#3dfd4f }
+.draggables .pending .story_header { border-color:#ddd }
+.draggables .in_progress .story_header { border-color:#3dc0fd }
+.draggables .testing .story_header { border-color:#fde03d }
+.draggables .complete .story_header { border-color:#3dfd4f }
 .draggables .story { cursor:pointer }
 
 .story .story_content { border-color:#aaa }
