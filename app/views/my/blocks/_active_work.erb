@@ -8,7 +8,7 @@ iteration = active_work
 <li class="<%= cycle('odd', 'even') %>">
   <div class="iteration">
     <%= link_to(
-      image_tag(iteration.pending? ? 'burndown.png' : iteration_burndown_path(iteration, :width => width),
+      image_tag(iteration.pending? ? 'burndown.png' : project_iteration_burndown_path(iteration.project, iteration, :width => width),
         :width => width, :height => height, :alt => "Burndown chart for #{h iteration.name}"),
       [iteration.project, iteration]) %>
     <%= link_to h(iteration), [iteration.project, iteration] %>
@@ -16,7 +16,7 @@ iteration = active_work
 
   <div class="stories">
     <ol class="stories">
-      <%= render @stories.select { |s| s.iteration == iteration } %>
+      <%= render @user.active_stories_worked_on.select { |s| s.iteration == iteration } %>
     </ol>
   </div>
 </li>

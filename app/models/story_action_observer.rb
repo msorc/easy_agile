@@ -13,12 +13,12 @@ class StoryActionObserver < ActiveRecord::Observer
       raise "don't know what to do with #{obj.inspect}"
     end
 
-    user = obj.current_user
+    user = User.current
     iteration_id = story.iteration_id
 
     StoryAction.find_or_create_by_user_id_and_story_id_and_iteration_id(
-      user.id, 
-      story.id, 
+      user.id,
+      story.id,
       iteration_id
     )
   end

@@ -22,7 +22,11 @@ Redmine::Plugin.register :easy_agile do
   Dispatcher.to_prepare do
     Project.send(:include, ProjectPatch) unless Project.included_modules.include? ProjectPatch
     User.send(:include, UserPatch) unless User.included_modules.include? UserPatch
+    MyController.send(:include, MyControllerPatch) unless MyController.included_modules.include? MyControllerPatch
   end
+
+  # observer
+  ActiveRecord::Base.observers = :acceptance_criterion_observer, :story_action_observer
 
   menu :project_menu, :easy_agile, { :controller => 'easy_agile', :action => 'show' }, :caption => 'Easy Agile', :before => :calendar, :param => :project_id
 
