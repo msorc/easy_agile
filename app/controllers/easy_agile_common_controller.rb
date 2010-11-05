@@ -7,4 +7,9 @@ class EasyAgileCommonController < ApplicationController
   def controller_name
     "easy_agile"
   end
+
+  # show tabs in a layout?
+  def has_tabs?
+    true
+  end
 end

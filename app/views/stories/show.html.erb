@@ -6,9 +6,9 @@
 <% end %>
 
 <div class="<%= story_classes @story %>">
-  <div class="content">
-    <div class="header">
-      <h3><%= h @story %></h3>
+  <div class="story_content">
+    <div class="story_header">
+      <h4><%= h @story %></h4>
       <% if @story.estimate? %>
         <p class="estimate" title="Story Points"><span>Story Points:</span> <%= @story.estimate %></p>
       <% end %>
@@ -19,7 +19,7 @@
 
 <% if @story.iteration && @story.iteration.active? %>
   <div id="users">
-    <h2>Story Team</h2>
+    <h3>Story Team</h3>
     <% unless @story.team_members.empty? %>
       <ul>
       <%= render @story.team_members %>
@@ -38,7 +38,7 @@
 <% end %>
 
 <div id="acceptance_criteria">
-  <h2>Acceptance Criteria</h2>
+  <h3>Acceptance Criteria</h3>
   <% form_for [@project, @story, AcceptanceCriterion.new], :html => { :class => "add" } do |f| %>
     <%= f.error_messages %>
     <p>
@@ -48,7 +48,7 @@
     </p>
   <% end %>
 
-  <div class="content">
+  <div class="story_content">
     <%= render :partial => 'acceptance_criteria/list' %>
   </div>
 </div>

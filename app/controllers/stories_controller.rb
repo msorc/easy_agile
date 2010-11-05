@@ -5,7 +5,7 @@ class StoriesController < EasyAgileCommonController
   before_filter :new_story, :only => [:new, :create]
 
   helper :easy_agile
-  layout 'base'
+
 
   def backlog
     if @project.stories.backlog.empty?
@@ -103,6 +103,10 @@ So that "
 
   rescue ActiveRecord::RecordInvalid => e
     render :template => 'stories/edit'
+  end
+
+  def has_tabs?
+    false
   end
 
   protected

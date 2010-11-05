@@ -19,25 +19,26 @@
                         :cache => false, :plugin => 'easy_agile') %>
 <% end %>
 
-<% selected_tab = controller.tab_name %>
-<div class="tabs">
-  <ul>
-    <% ea_tabs.each do |tab| -%>
-      <li><%= link_to l(tab[:label]), tab[:path],
-              :id => "tab-#{tab[:id]}",
-              :class => (tab[:id] != selected_tab ? nil : 'selected'),
-              :onclick => "showTab('#{tab[:id]}'); this.blur(); return false;" %></li>
-    <% end -%>
-  </ul>
-  <div class="contextual">
-    <%= link_to 'New Story',
-                contextual_new_story_path,
-                :accesskey => 'n',
-                :id => 'contextual_new_story',
-                :class => 'icon icon-add' %>
+<% if controller.has_tabs? %>
+  <% selected_tab = controller.tab_name %>
+  <div class="tabs">
+    <ul>
+      <% ea_tabs.each do |tab| -%>
+        <li><%= link_to l(tab[:label]), tab[:path],
+                :id => "tab-#{tab[:id]}",
+                :class => (tab[:id] != selected_tab ? nil : 'selected'),
+                :onclick => "showTab('#{tab[:id]}'); this.blur(); return false;" %></li>
+      <% end -%>
+    </ul>
+    <div class="contextual">
+      <%= link_to 'New Story',
+          contextual_new_story_path,
+          :accesskey => 'n',
+          :id => 'contextual_new_story',
+          :class => 'icon icon-add' %>
+    </div>
   </div>
-</div>
-
+<% end %>
 
 <div class="ea_body <%= body_classes.join(' ') %>"
      id="<%= "#{controller.try(:tab_name) || controller.controller_name}_#{controller.action_name}" %>">

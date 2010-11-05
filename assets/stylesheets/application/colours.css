@@ -65,8 +65,8 @@ div.section h3 { background:#fff }
 /* .javascript #request h2#request_header { background:#ff7f2a } */
 /* /\* end javascript request *\/ */
 
-/* #headings .complete { background:#3dfd4f } */
-/* #acceptance_criteria #completed, .aside { color: #aaa } */
+#headings .complete { background:#3dfd4f }
+#acceptance_criteria #completed, .aside { color: #aaa }
 
 /* /\* home/show *\/ */
 /* body#home_show #recent_work .section>ol>li { background:#e4e5f3; */
