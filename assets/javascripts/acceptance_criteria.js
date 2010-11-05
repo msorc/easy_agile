@@ -57,7 +57,7 @@ var AcceptanceCriteria = {
   formInit: function(base) {
     if (!base) base = $('#acceptance_criteria');
     $(base).find('.delete form, form.add').ajaxForm({
-      target: '#acceptance_criteria .content',
+      target: '#acceptance_criteria .story_content',
       resetForm: true,
       error: function(xhr) { alert(xhr.responseText) },
       success: function() {
