@@ -1,6 +1,3 @@
-# EasyAgile
+= easy_agile
 
-EasyAgile is a Redmine plugin for doing agile development.
-
-Is a fork of {Simply Agile}[http://github.com/camelpunch/simply_agile] standalone project.
-
+Description goes here

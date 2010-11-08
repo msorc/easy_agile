@@ -1,7 +1,0 @@
-test:
-  vendor: jandaweb
-  simulate: true
-
-development:
-  vendor: jandaweb
-  simulate: true

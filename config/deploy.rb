@@ -1,1 +1,0 @@
-set :application, "simply-agile"
