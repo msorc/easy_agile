@@ -48,7 +48,7 @@ class Story < ActiveRecord::Base
 
   named_scope :incomplete, :conditions => ['status != ?', 'complete']
 
-  after_save :update_iteration_points
+  after_update :update_iteration_points
 
   def to_s
     name || "New Story"
