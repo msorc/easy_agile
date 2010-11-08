@@ -22,7 +22,7 @@
       <div class="active">
         <% width = @iterations.size == 1 ? 600 : 300 -%>
         <% height = @iterations.size == 1 ? 450 : 225 -%>
-        <ul>
+        <ul class="iterations_list">
           <%= render @iterations, :width => width %>
         </ul>
       </div>

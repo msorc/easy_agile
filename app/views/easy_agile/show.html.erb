@@ -45,7 +45,7 @@
       <% unless @project.iterations.active.empty? %>
         <div class="active subsection">
           <h4>Active</h4>
-          <ol>
+          <ol class="iterations_list">
             <%= render @project.iterations.active, :width => 150 %>
           </ol>
         </div>
@@ -53,7 +53,7 @@
       <% unless @project.iterations.pending.empty? %>
         <div class="planned subsection">
           <h4>Planned</h4>
-          <ol>
+          <ol class="iterations_list">
             <%= render @project.iterations.pending, :width => 150 %>
           </ol>
         </div>

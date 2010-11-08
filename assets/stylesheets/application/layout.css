@@ -117,3 +117,5 @@ div#stories_backlog .javascript .story label,
 div#stories_backlog .javascript .story input { display:none }
 /* end stories/backlog */
 
+ol.stories, ol.stories * { margin: 0; padding: 0 }
+.iterations_list, .iteration_active * { margin: 0; padding: 0 }

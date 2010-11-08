@@ -8,6 +8,7 @@ class StoriesController < EasyAgileCommonController
 
 
   def backlog
+    @has_tabs = true
     if @project.stories.backlog.empty?
       render :template => 'stories/backlog_guidance', :layout => 'ea_base'
       return
@@ -106,7 +107,7 @@ So that "
   end
 
   def has_tabs?
-    false
+    @has_tabs
   end
 
   protected

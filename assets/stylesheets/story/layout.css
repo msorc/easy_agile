@@ -18,7 +18,7 @@ div.iteration_active #content .story img { right:29px }
 /* less/more links */
 div#stories_backlog #content .story .less_more,
 div#projects_show #backlog .story .less_more { margin-right:2.4em }
-#content .story .less_more { float:right; margin-top:4px; margin-right:105px }
+#content .story .less_more { float:right; margin-top:2px }
 #content .story .less_more a { display:block }
 #content .story .less_more a.less { margin-right:.5em; float:left }
 #content .story .less_more a.more { float:left }
@@ -28,6 +28,7 @@ div#projects_show #backlog .story .less_more { margin-right:2.4em }
                             border-width:1px; padding:0 3px; top:3px; right:3px }
 #content .story .estimate span { display:none }
 .story ol{ clear:both }
+.story h4 { border: none }
 
 div.iteration_active .javascript form.edit_story input,
 div.iteration_active .javascript form.edit_story label,
