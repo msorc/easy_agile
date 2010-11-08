@@ -48,6 +48,8 @@ class Story < ActiveRecord::Base
 
   named_scope :incomplete, :conditions => ['status != ?', 'complete']
 
+  after_save :update_iteration_points
+
   def to_s
     name || "New Story"
   end
@@ -63,5 +65,11 @@ class Story < ActiveRecord::Base
       users.clear
       self.update_attributes(:status => Status::IN_PROGRESS)
     end
+  end
+
+  private
+
+  def update_iteration_points
+    self.iteration.update_burndown_data_points
   end
 end
