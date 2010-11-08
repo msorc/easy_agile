@@ -4,6 +4,8 @@ class AcceptanceCriteriaController < ApplicationController
   before_filter :new_acceptance_criterion, :only => :create
   before_filter :get_acceptance_criterion, :only => [:edit, :update]
 
+  layout :decide_layout
+
   def create
     respond_to do |format|
       format.html do
@@ -79,6 +81,17 @@ class AcceptanceCriteriaController < ApplicationController
   end
 
   protected
+
+  def decide_layout
+    layout = ''
+    respond_to do |format|
+      format.js do
+        layout = 'request'
+      end
+    end
+
+    layout
+  end
 
   def get_story
     @story = @project.stories.find(params[:story_id])

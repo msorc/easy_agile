@@ -1,14 +1,13 @@
 <% content_for :title, "New Story" %>
 <% content_for :h2, "New Story" %>
-<% form_for @story do |form| %>
-  <%= form.error_messages %>
-  <%= render :partial => 'stories/project_select' %>
-  <p class="checkbox" id="add_to_iteration">
+<% form_for [@project, @story] do |form| %>
+<%= form.error_messages %>
+<p class="checkbox" id="add_to_iteration">
   <%= form.check_box :iteration_id, {}, @iteration.id, nil %>
   <%= form.label :iteration_id, "Add to the '#{h(@iteration)}' iteration" %>
-  </p>
-  <%= render form %>
-  <p class="submit">
+</p>
+<%= render form %>
+<p class="submit">
   <%= form.submit 'Create Story' %>
-  </p>
+</p>
 <% end %>

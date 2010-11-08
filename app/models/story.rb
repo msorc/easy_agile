@@ -70,6 +70,6 @@ class Story < ActiveRecord::Base
   private
 
   def update_iteration_points
-    self.iteration.update_burndown_data_points
+    iteration.try(:update_burndown_data_points)
   end
 end
