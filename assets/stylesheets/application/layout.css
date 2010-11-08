@@ -119,3 +119,5 @@ div#stories_backlog .javascript .story input { display:none }
 
 ol.stories, ol.stories * { margin:0; padding:0 }
 .iterations_list, .iteration_active * {  list-style:none; margin:0; padding:0 }
+
+.contextual { position:relative; z-index:50 }
