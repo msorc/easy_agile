@@ -121,3 +121,7 @@ ol.stories, ol.stories * { margin:0; padding:0 }
 .iterations_list, .iteration_active * {  list-style:none; margin:0; padding:0 }
 
 .contextual { position:relative; z-index:50 }
+
+/* icons  */
+.icon-new-task { background-image: url(../../../../images/ticket.png); }
+.icon-plan-iteration { background-image: url(../../../../images/table_multiple.png); }

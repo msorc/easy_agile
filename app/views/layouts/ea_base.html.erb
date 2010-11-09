@@ -19,9 +19,9 @@
                         :cache => false, :plugin => 'easy_agile') %>
 <% end %>
 
-<% if controller.has_tabs? %>
-  <% selected_tab = controller.tab_name %>
-  <div class="tabs">
+<div class="tabs">
+  <% if controller.has_tabs? %>
+    <% selected_tab = controller.tab_name %>
     <ul>
       <% ea_tabs.each do |tab| -%>
         <li><%= link_to l(tab[:label]), tab[:path],
@@ -30,15 +30,21 @@
                 :onclick => "showTab('#{tab[:id]}'); this.blur(); return false;" %></li>
       <% end -%>
     </ul>
-    <div class="contextual">
-      <%= link_to 'New Story',
-          contextual_new_story_path,
-          :accesskey => 'n',
-          :id => 'contextual_new_story',
-          :class => 'icon icon-add' %>
-    </div>
+  <% end %>
+  <div class="contextual">
+    <%= link_to 'New Story',
+        contextual_new_story_path,
+        :accesskey => 'n',
+        :id => 'contextual_new_story',
+        :class => 'icon icon-new-task' %>
+    <%= link_to 'Plan an iteration',
+        new_project_iteration_path(@project),
+        :accesskey => 'i',
+        :id => 'contextual_new_iteration',
+        :class => 'icon icon-plan-iteration' %>
   </div>
-<% end %>
+</div>
+
 
 <div class="ea_body <%= body_classes.join(' ') %>"
      id="<%= "#{controller.try(:tab_name) || controller.controller_name}_#{controller.action_name}" %>">
