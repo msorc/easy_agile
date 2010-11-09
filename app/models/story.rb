@@ -33,7 +33,11 @@ class Story < ActiveRecord::Base
 
   validates_presence_of :name, :content, :project_id
   validates_uniqueness_of :name, :scope => :project_id
-  validates_numericality_of :estimate, :only_integer => true, :allow_nil => true
+  validates_numericality_of :estimate,
+    :only_integer => true,
+    :allow_nil => true,
+    :greater_than_or_equal_to => 0,
+    :less_than => 101
 
   def validate
     if iteration && project && (iteration.project_id != project_id)
