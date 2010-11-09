@@ -3,10 +3,10 @@
 
 <div id="backlog" class="section_container first">
   <div class="section">
-    <h3>Backlog</h3>
+    <h3><%= l(:backlog) %></h3>
     <% if @project.stories.backlog.empty? %>
       <p>
-      This project has no backlog.
+        <%= l(:project_has_no_backlog) %>
       </p>
     <% else %>
     <ol class="stories">
@@ -14,8 +14,8 @@
     </ol>
     <% if @project.stories.backlog.size > 10 -%>
     <p class="more">
-      …and <%= @project.stories.backlog.size - 10 %> more in the
-      <%= link_to "full backlog",
+      <%= l(:the_rest_stories) %> <%= @project.stories.backlog.size - 10 %> <%= l(:in) %>
+      <%= link_to l(:full_backlog),
                   backlog_project_stories_path(@project) %>.
     </p>
     <% end %>
@@ -29,22 +29,22 @@
               :class => 'section')
   %>
   <div class="section">
-    <h3>Iterations</h3>
+    <h3><%= l(:iterations) %></h3>
     <% if (@project.iterations.active + @project.iterations.pending).empty? %>
       <div class="guidance">
       <p>
-      This project has no active or planned iterations.
+        <%= l(:no_active_or_planned_iterations) %>
       </p>
       <% unless @project.iterations.finished.empty? %>
       <p>
-      <%= link_to 'Finished Iterations', finished_iterations_url %>
+      <%= link_to l(:finished_iterations), finished_iterations_url %>
       </p>
       <% end %>
       </div>
     <% else %>
       <% unless @project.iterations.active.empty? %>
         <div class="active subsection">
-          <h4>Active</h4>
+          <h4><%= l(:active) %></h4>
           <ol class="iterations_list">
             <%= render @project.iterations.active, :width => 150 %>
           </ol>
@@ -52,7 +52,7 @@
       <% end %>
       <% unless @project.iterations.pending.empty? %>
         <div class="planned subsection">
-          <h4>Planned</h4>
+          <h4><%= l(:planned) %></h4>
           <ol class="iterations_list">
             <%= render @project.iterations.pending, :width => 150 %>
           </ol>

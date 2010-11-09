@@ -7,6 +7,23 @@ en:
   new_story: "New story"
   plan_iteration: "Plan an iteration"
 
+  active: "Active"
+  planned: "Planned"
+  finished_iterations: "Finished Iterations"
+  no_active_or_planned_iterations: "This project has no active or planned iterations."
+  project_no_backlog: "This project has no backlog."
+  full_backlog: "full backlog"
+
+  the_rest_stories: "...and the rest"
+  no_stories: "No Stories"
+  you_can_start_by_new_story: "You should start by"
+  creating_new_story: "creating new story"
+  story_plural: "Stories"
+  total_story_points: "Total Story Points"
+  in: "in"
+
+  iteration_no_stories: "This iteration does not have any stories."
+
   field_duration: "Duration"
   field_stories: "Stories"
   field_criterion: "Criterion"

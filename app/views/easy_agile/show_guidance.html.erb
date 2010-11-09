@@ -4,7 +4,7 @@
 
 <%= simple_format h(@project.description) %>
 
-<h2>No Stories</h2>
+<h2><%= l(:no_stories) %></h2>
 <p>
-You should start by <%= link_to 'creating a story', [:new, @project, :story] %>.
+<%= l(:you_can_start_by_new_story) %> <%= link_to l(:creating_new_story), [:new, @project, :story] %>.
 </p>

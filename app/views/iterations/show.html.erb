@@ -15,14 +15,12 @@
 
 <div class="section_container">
 <div class="section">
-<h2>Stories</h2>
+<h2><%= l(:story_plural) %></h2>
 <% if @iteration.stories.empty? %>
-  <p>
-  This iteration does not have any stories.
-  </p>
+  <p><%= l(:iteration_no_stories) %></p>
 <% else %>
   <p class="estimate total">
-  Total Story Points: <%= @iteration.stories.sum(:estimate) %>
+  <%= l(:total_story_points) %>: <%= @iteration.stories.sum(:estimate) %>
   </p>
   <ol class="stories">
     <%= render @iteration.stories %>
