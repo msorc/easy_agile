@@ -32,8 +32,8 @@ class Story < ActiveRecord::Base
     :conditions => ['status = ? AND iteration_id IS NULL', 'pending']
 
   validates_presence_of :name, :content, :project_id
-
   validates_uniqueness_of :name, :scope => :project_id
+  validates_numericality_of :estimate, :only_integer => true, :allow_nil => true
 
   def validate
     if iteration && project && (iteration.project_id != project_id)

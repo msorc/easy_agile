@@ -7,8 +7,10 @@ class Iteration < ActiveRecord::Base
   has_many :stories
   has_many :burndown_data_points
   validates_presence_of :name, :duration, :project_id
+  validates_uniqueness_of :name
   validates_numericality_of :duration,
     :greater_than_or_equal_to => 1,
+    :less_than_or_equal_to => 60,
     :only_integer => true
 
   named_scope :active,
