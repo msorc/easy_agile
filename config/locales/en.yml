@@ -4,5 +4,9 @@ en:
   dashboard: "Dashboard"
   iteration_plural: "Iterations"
 
+  new_story: "New story"
+  plan_iteration: "Plan an iteration"
+
   field_duration: "Duration"
   field_stories: "Stories"
+  field_criterion: "Criterion"

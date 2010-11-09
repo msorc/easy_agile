@@ -32,19 +32,23 @@
     </ul>
   <% end %>
   <div class="contextual">
-    <%= link_to 'New Story',
+    <%= link_to l(:new_story),
         contextual_new_story_path,
         :accesskey => 'n',
         :id => 'contextual_new_story',
         :class => 'icon icon-new-task' %>
-    <%= link_to 'Plan an iteration',
+    <%= link_to l(:plane_iteration),
         new_project_iteration_path(@project),
         :accesskey => 'i',
         :id => 'contextual_new_iteration',
         :class => 'icon icon-plan-iteration' %>
+    <%= link_to l(:dashboard),
+        project_easy_agile_path(@project),
+        :accesskey => 'd',
+        :id => 'contextual_ea_dashboard',
+        :class => 'icon icon-ea-dashboard' %>
   </div>
 </div>
-
 
 <div class="ea_body <%= body_classes.join(' ') %>"
      id="<%= "#{controller.try(:tab_name) || controller.controller_name}_#{controller.action_name}" %>">
