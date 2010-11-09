@@ -24,12 +24,8 @@
 </div>
 
 <div id="iterations" class="section_container with_subsections">
-  <%= link_to("Plan an iteration",
-              new_project_iteration_path(@project),
-              :class => 'section')
-  %>
   <div class="section">
-    <h3><%= l(:iterations) %></h3>
+    <h3><%= l(:iteration_plural) %></h3>
     <% if (@project.iterations.active + @project.iterations.pending).empty? %>
       <div class="guidance">
       <p>

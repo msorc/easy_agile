@@ -12,9 +12,6 @@
   <p>
     There are currently no finished iterations.
   </p>
-  <% unless User.current.projects.empty? %>
-  <%= render :partial => 'iterations/new' %>
-  <% end %>
 <% else -%>
   <div id="iterations" class="section_container">
     <div class="section">
