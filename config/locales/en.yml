@@ -1,28 +1,40 @@
 # English strings go here for Rails i18n
 en:
-  backlog: "Backlog"
-  dashboard: "Dashboard"
+  iteration: "Iteration"
   iteration_plural: "Iterations"
-
-  new_story: "New story"
   plan_iteration: "Plan an iteration"
-
   active: "Active"
   planned: "Planned"
+  finished: "Finished"
   finished_iterations: "Finished Iterations"
   no_active_or_planned_iterations: "This project has no active or planned iterations."
-  project_no_backlog: "This project has no backlog."
-  full_backlog: "full backlog"
 
+  add_to_iteration: "Add to the iteration"
+  iteration_no_stories: "This iteration does not have any stories."
+
+  new_story: "New story"
   the_rest_stories: "...and the rest"
   no_stories: "No Stories"
   you_can_start_by_new_story: "You should start by"
   creating_new_story: "creating new story"
+  story: "Story"
   story_plural: "Stories"
   total_story_points: "Total Story Points"
-  in: "in"
+  story_team: "Story Team"
+  create_story: "Create Story"
+  work_on_story: "Work on this story"
+  feature: "Feature"
 
-  iteration_no_stories: "This iteration does not have any stories."
+  backlog: "Backlog"
+  project_no_backlog: "This project has no backlog."
+  full_backlog: "full backlog"
+
+  in: "in"
+  dashboard: "Dashboard"
+  next_steps: "Next Steps"
+
+  new_criterion: "New Criterion"
+  acceptance_criteria: "Acceptance Criteria"
 
   field_duration: "Duration"
   field_stories: "Stories"

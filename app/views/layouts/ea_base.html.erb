@@ -69,7 +69,6 @@
     <%= link_to 'Keyboard Shortcuts', keyboard_shortcuts_path, :accesskey => 'k' %>
   </p>
 <% end %>
-<%= render :partial => 'shared/footer' %>
 <% unless request.user_agent.include?('iPhone') %>
   <%= javascript_includes %>
 <% end %>
