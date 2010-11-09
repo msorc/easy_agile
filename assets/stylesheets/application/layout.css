@@ -95,13 +95,9 @@ div#iterations_finished .finished { padding:45px 30px 30px 30px;
 /* end iterations/index */
 
 /* stories/show */
-div#stories_show #users { width:20em }
-div#stories_show #users ul { overflow:hidden }
-div#stories_show #users a { float:left; clear:left }
-div#stories_show #users form.button-to { float:right }
-div#stories_show h2 { margin:1em 0 0 0 }
+div#stories_show #users ul { width:20em }
+div#stories_show #users form.button-to { float:right; margin-top:-4px }
 div#stories_show #acceptance_criteria table { width:40%; margin-top:1em }
-div#stories_show #acceptance_criteria table tr { vertical-align:top }
 div#stories_show #acceptance_criteria table td { padding:0 5px }
 div#stories_show #acceptance_criteria table td.edit,
 div#stories_show #acceptance_criteria table td.delete { width:4em }
@@ -122,7 +118,11 @@ ol.stories, ol.stories * { margin:0; padding:0 }
 
 .contextual { position:relative; z-index:50 }
 
+.col-left { float:left; width:48% }
+.clearer { clear:both }
+
 /* icons  */
 .icon-new-task { background-image: url(../../../../images/ticket.png); }
 .icon-plan-iteration { background-image: url(../../../../images/table_multiple.png); }
 .icon-ea-dashboard { background-image: url(../../../../images/news.png); }
+
