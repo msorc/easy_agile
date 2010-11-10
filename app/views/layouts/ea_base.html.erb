@@ -64,11 +64,6 @@
     <%= yield %>
   </div>
 </div>
-<% content_for :footer do %>
-  <p>
-    <%= link_to 'Keyboard Shortcuts', keyboard_shortcuts_path, :accesskey => 'k' %>
-  </p>
-<% end %>
 <% unless request.user_agent.include?('iPhone') %>
   <%= javascript_includes %>
 <% end %>
