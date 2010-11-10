@@ -67,6 +67,7 @@ en:
   recently_finished_iterations: "Recently finished iterations"
 
   in: "in"
+  ends_at: "Ends at"
   dashboard: "Dashboard"
   next_steps: "Next Steps"
   estimate: "Estimate"

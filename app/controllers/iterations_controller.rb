@@ -14,7 +14,7 @@ class IterationsController < EasyAgileCommonController
     redirect_to [@project, @iteration]
 
   rescue ActiveRecord::RecordInvalid => e
-    @stories = e.record.planned_stories
+    @stories = @iteration.planned_stories
     render :template => 'iterations/new'
   end
 

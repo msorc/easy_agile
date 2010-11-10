@@ -17,7 +17,7 @@
   <% if @iteration.finished? %>
     <%= l(:iteration_finished_on) + l(@iteration.end_date) %>
   <% else %>
-    <%= l(:days_till_iteration_end) + @iteration.days_remaining.to_s + " - " + l(@iteration.end_date) %>
+    <%= l(:days_till_iteration_end) %><strong> <%= @iteration.days_remaining.to_s %></strong>. <%= l(:ends_at) %>: <strong><%=  @iteration.end_date %></strong>
   <% end %>
   </p>
 </div>
