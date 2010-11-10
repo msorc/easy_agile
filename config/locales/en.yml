@@ -27,6 +27,7 @@ en:
   update_story: "Update Story"
   work_on_story: "Work on this story"
   feature: "Feature"
+  story_no_acceptance_criteria: "This story has no acceptance criteria."
 
   status_pending: "Pending"
   status_in_progress: "In Progress"
@@ -46,6 +47,9 @@ en:
   estimate: "Estimate"
   editing: "Editing"
   include: "Include"
+  remove_me: "Remove Me"
+  complete: "Complete"
+  uncomplete: "Uncomplete"
 
   new_criterion: "New Criterion"
   acceptance_criteria: "Acceptance Criteria"

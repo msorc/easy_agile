@@ -1,6 +1,6 @@
 <% if @story.acceptance_criteria.empty? %>
   <p class="guidance">
-    This story has no acceptance criteria.
+     <%= l(:story_no_acceptance_criteria) %>
   </p>
 <% else %>
   <div id="uncompleted">

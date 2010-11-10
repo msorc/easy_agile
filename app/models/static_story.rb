@@ -1,2 +1,0 @@
-class StaticStory < Story
-end
