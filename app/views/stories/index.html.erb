@@ -1,5 +1,5 @@
-<% content_for :title, "#{@project} Stories" %>
-<% content_for :h2, h("#{@project} Stories") %>
+<% content_for :title, "#{l(:story_plural)} #{@project}" %>
+<% content_for :h2, h("#{l(:story_plural)} #{@project}") %>
 <% unless @project.stories.empty? %>
   <ol>
     <% @project.stories.each do |story| %>

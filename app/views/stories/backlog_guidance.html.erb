@@ -2,8 +2,8 @@
 <% content_for :h2, h("#{@project} Backlog") %>
 <% body_classes << 'guidance' %>
 
-<h2>Empty backlog</h2>
+<h2><%= l(:emtpy_backlog) %></h2>
 <p>
-You don't have a backlog! You might want to write a
-<%= link_to 'new story', new_project_story_path(@project) %>.
+  <%= l(:new_story_in_backlog) %>
+  <%= link_to l(:new_story_accusative), new_project_story_path(@project) %>.
 </p>

@@ -4,7 +4,7 @@
     <%= check_box_tag("stories[#{story.id}][include]",
                       '1',
                       story.iteration_id? || (@iteration && @iteration.stories.include?(story))) %>
-    <%= label_tag "stories_#{story.id}_include", "Include" %>
+    <%= label_tag "stories_#{story.id}_include", l(:include) %>
     </div>
   <% end %>
 
@@ -16,7 +16,7 @@
       <% else %>
         <h4><%= link_to h(story), [story.project, story] %></h4>
         <% if story.estimate? %>
-          <p class="estimate" title="Story Points"><span>Story Points: </span><%= story.estimate %></p>
+          <p class="estimate" title="Story Points"><span><%= l(:story_points) %>: </span><%= story.estimate %></p>
         <% end %>
       <% end %>
     </div>
@@ -26,7 +26,7 @@
   <% if (!body_classes.include?('iteration_active') &&
          !story.acceptance_criteria.empty?) %>
     <div class="acceptance_criteria">
-      <h4>Acceptance Criteria</h4>
+      <h4><%= l(:acceptance_criteria) %></h4>
       <ul>
         <% story.acceptance_criteria.each do |criterion| %>
           <li><%= h criterion %></li>
