@@ -3,7 +3,7 @@
 <% body_classes << 'iteration_active' %>
 
 <div id="stories">
-  <h2>Stories</h2>
+  <h2><%= l(:story_plural) %></h2>
   <ol class="stories">
     <%= render @iteration.stories %>
   </ol>
@@ -15,10 +15,9 @@
                 :width => 350) %>
   <p id="time_remaining">
   <% if @iteration.finished? %>
-  This iteration finished on <%= l @iteration.end_date %>.
+    <%= l(:iteration_finished_on) + l(@iteration.end_date) %>
   <% else %>
-  This iteration ends in <%= pluralize @iteration.days_remaining, 'day' %>
-  on <%= l @iteration.end_date %>.
+    <%= l(:days_till_iteration_end) + @iteration.days_remaining + " - " + l(@iteration.end_date) %>
   <% end %>
   </p>
 </div>

@@ -1,9 +1,9 @@
-<h3>Easy Agile Home</h3>
+<h3><%= l(:easy_agile_home) %></h3>
 
 <% unless @user.active_iterations_worked_on.empty? -%>
   <div id="recent_work" class="section_container">
     <div class="section">
-      <h4>Recent work</h4>
+      <h4><%= l(:recent_work) %></h4>
       <ol>
         <%= render :partial => 'my/blocks/active_work',
           :collection => @user.active_iterations_worked_on %>
@@ -15,7 +15,7 @@
 <% unless @user.recently_finished_iterations_worked_on.empty? -%>
   <div id="recently_finished_iterations" class="section_container">
     <div class="section">
-      <h4>Recently finished iterations</h4>
+      <h4><%= l(:recently_finished_iterations) %></h4>
       <div class="finished">
         <ol>
           <%= render @user.recently_finished_iterations_worked_on %>
@@ -29,7 +29,7 @@
 <% unless @user.active_iterations.empty? -%>
   <div id="iterations" class="section_container">
     <div class="section">
-      <h4>Active Iterations</h4>
+      <h4><%= l(:active_iterations) %></h4>
       <div class="active">
         <ol>
           <%= render @user.active_iterations, :width => 300 %>

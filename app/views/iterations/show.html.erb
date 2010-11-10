@@ -1,14 +1,14 @@
-<% content_for :title, "#{@iteration} | #{@project} Iterations" %>
+<% content_for :title, "#{@iteration} | #{@project} #{l(:iteration_plural)}" %>
 <% content_for :h2, h(@iteration) %>
 <% content_for :actions do %>
-<li><%= link_to 'Re-plan', edit_project_iteration_path(@project, @iteration) %></li>
+<li><%= link_to l(:re_plan), edit_project_iteration_path(@project, @iteration) %></li>
 <% end %>
 
 <% form_for(@iteration,
             :url => project_iteration_active_iteration_path(@project, @iteration),
             :html => {:method => :post}) do |f| %>
   <p class="submit">
-  <%= f.submit 'Start Iteration' %>
+  <%= f.submit l(:start_iteration) %>
   </p>
   <%= f.error_messages %>
 <% end %>
