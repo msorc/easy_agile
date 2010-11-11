@@ -19,7 +19,7 @@ EasyAgile is a simple task board which allows you to define stories and track th
 Easy Agile based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile] standalone application by {Jandaweb}[http://www.jandaweb.com/]
 
 === Project team
-{Mykhaylo Sorochan}[http://msorc.github.com] - software development<br>
-Nataliya Shatokhina - GUI testing
+* {Mykhaylo Sorochan}[http://msorc.github.com] - software development
+* Nataliya Shatokhina - GUI testing
 
 Copyright (c) 2010 Sphere Consulting Inc., released under the MIT license (see LICENSE)
