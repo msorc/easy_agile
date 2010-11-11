@@ -25,7 +25,7 @@ en:
   update_iteration: "Update Iteration"
   planning_iteration: "Planning iteration"
   burndown_for: "Burndown chart for"
-  days_till_iteration_end: "Days left till iteration end "
+  iteration_days_left: "Days left till iteration end"
   iteration_finished_on: "This iteration finished on "
   new_iteration_for: "New iteration for"
   no_stories_for: "No available stories for"

@@ -3,11 +3,11 @@ class Burndown
   attr_accessor :width
 
   DEFAULT_WIDTH = 600
-  
+
   def initialize(iteration, options = {})
     self.iteration = iteration
     self.width = options[:width] || DEFAULT_WIDTH
-    self.width = 600 if width.to_i > 600 
+    self.width = 600 if width.to_i > 600
   end
 
   def to_png
@@ -32,19 +32,36 @@ class Burndown
 
   def baseline_data
     points = iteration.initial_estimate
-    duration = iteration.duration - 1 # Don't need to work out the first day
+    duration = iteration.duration
     points_per_day = points.to_f / duration
 
     data = [points]
-    (iteration.duration - 1).times do
+    iteration.duration.times do
       data << points -= points_per_day
     end
     data
   end
 
   def actual_data
-    BurndownDataPoint.for_iteration(iteration).map(&:story_points) <<
-      iteration.story_points_remaining
+    data = [iteration.story_points_remaining]
+
+    data_points = BurndownDataPoint.for_iteration(iteration).inject({}) do |data_points, point|
+      data_points[point.date] = point.story_points
+      data_points
+    end
+
+    today = Date.today
+    start = iteration.start_date
+    previous_points = data.last
+    (0...(today - start).to_i).reverse_each do |d|
+      previous_points = data_points[start + d.days] || previous_points
+      data << previous_points
+    end
+
+    data << iteration.initial_estimate
+    data.reverse!
+
+    data
   end
 
   def labels
