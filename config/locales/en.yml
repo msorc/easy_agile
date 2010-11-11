@@ -49,6 +49,8 @@ en:
   work_on_story: "Work on this story"
   feature: "Feature"
   story_no_acceptance_criteria: "This story has no acceptance criteria."
+  backlog_drag_stories: "Drag stories to change priority"
+  iteration_drag_stories: "Drag stories to set their statuses"
 
   status_pending: "Pending"
   status_in_progress: "In Progress"
@@ -58,7 +60,7 @@ en:
 
   backlog: "Backlog"
   new_story_in_backlog: "You don't have a backlog! You might want to write a"
-  project_no_backlog: "This project has no backlog."
+  project_has_no_backlog: "This project has no backlog."
   full_backlog: "full backlog"
   empty_backlog: "Empty Backlog"
 

@@ -16,9 +16,6 @@ var Burndown = {
   }
 }
 function DraggableStories() {
-  // add some guidance
-  $('ol.stories').before('<div class="guidance"><p>Drag stories to set their statuses</p></div>');
-
   DraggableStories.labelColumns();
   DraggableStories.create();
 

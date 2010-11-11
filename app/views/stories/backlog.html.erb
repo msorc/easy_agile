@@ -1,7 +1,8 @@
-<% content_for :title, "#{@project} Backlog" %>
-<% content_for :h2, h("#{@project} Backlog") %>
+<% content_for :title, "#{@project} #{l(:backlog)}" %>
+<% content_for :h2, h("#{@project} #{l(:backlog)}") %>
 
 <% form_for @project do |f| %>
+<p class="guidance"><%= l(:backlog_drag_stories) %></p>
 <ol class="stories">
   <%= render @project.stories.backlog %>
 </ol>
@@ -11,7 +12,7 @@
 <% end %>
 
 <div id="next_steps">
-  <h2>Next Steps</h2>
+  <h2><%= l(:next_steps) %></h2>
   <ul>
     <li>
     <%= link_to l(:new_story), contextual_new_story_path %>

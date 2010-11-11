@@ -1,4 +1,4 @@
-div.iteration_active .javascript #stories .guidance p { max-width:none }
+div.iteration_active .javascript #stories .guidance p { max-width:none; margin:1em 0px }
 div.iteration_active .javascript #stories .guidance,
 div.iteration_active .javascript #burndown,
 div.iteration_active .javascript #headings ol li { text-align:center }
