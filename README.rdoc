@@ -1,3 +1,27 @@
 = easy_agile
 
-Description goes here
+Easy Agile is a Redmine plugin for agile development teams. Based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile].
+
+== Install
+Follow the plugin installation manual[http://www.redmine.org/wiki/redmine/Plugins]. Or go this way:
+
+  # cd redmine/vendor/plugins
+  redmine/vendor/plugins # git clone git@github.com:SphereConsultingInc/easy_agile.git
+  redmine/vendor/plugins # cd ../..
+  # rake db:migrate_plugins RAILS_ENV=production (or simply "rake db:migrate_plugins" for development mode)
+
+And restart Redmine. In project's setting in Modules include 'EasyAgile' or enable it globally for all projects from Administration area. It will be available under 'Easy Agile' tab.
+
+== Description
+
+EasyAgile is a simple task board which allows you to define stories and track their statuses through iteration. The application is quite straigtforward for the people familiar with the SCRUM and Agile methodology.
+
+== Credits
+
+Easy Agile based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile] standalone application by {Jandaweb}[http://www.jandaweb.com/]
+
+Project team:
+{Mykhaylo Sorochan}[http://msorc.github.com] - software development
+Nataliya Shatokhina - GUI testing
+
+Copyright (c) 2010 Sphere Consulting Inc. released under the MIT license
