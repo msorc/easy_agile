@@ -20,7 +20,7 @@ div.iteration_active #content .story img { right:29px }
 /* less/more links */
 div#stories_backlog #content .story .less_more,
 div#projects_show #backlog .story .less_more { margin-right:2.4em }
-#content .story .less_more { float:right; margin-top:6px; margin-right:5px; }
+#content .story .less_more { float:right; margin-top:6px; margin-right:45px; }
 #content .story .less_more a { display:block }
 #content .story .less_more a.less { margin-right:.5em; float:left }
 #content .story .less_more a.more { float:left }

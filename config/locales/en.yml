@@ -24,6 +24,7 @@ en:
   iteration_no_stories: "This iteration does not have any stories."
   update_iteration: "Update Iteration"
   planning_iteration: "Planning iteration"
+  planning_iteration_for: "Planning iteration for"
   burndown_for: "Burndown chart for"
   iteration_days_left: "Days left till iteration end"
   iteration_finished_on: "This iteration finished on "
@@ -32,6 +33,7 @@ en:
   no_stories_no_iteration: "There are no available stories for this project, so you can't plan an iteration."
   you_might_want: "You might want to"
   create_story_for_project: "create a story for this project"
+  iteration_plan_guidance: "Iteration should have a unique name, duration from 1 to 60 days. Story can have upto 100 points."
 
   new_story: "New story"
   new_story_accusative: "new story"

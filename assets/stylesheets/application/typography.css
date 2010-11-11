@@ -1,7 +1,4 @@
-h1 { font-size:250%; margin-bottom:1em }
-h1 a { text-decoration:none }
-h2,caption { font-weight:bold; font-size:138.5% }
-p { margin:1em 0 1em 0; max-width:30em }
+p { margin:1em 0 1em 0 }
 table p { margin:0 }
 table th { font-weight:bold }
 a:hover { text-decoration:none }
