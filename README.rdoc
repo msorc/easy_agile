@@ -10,7 +10,7 @@ Follow the plugin installation manual[http://www.redmine.org/wiki/redmine/Plugin
   redmine/vendor/plugins # cd ../..
   # rake db:migrate_plugins RAILS_ENV=production (or simply "rake db:migrate_plugins" for development mode)
 
-And restart Redmine. In project's setting in Modules include 'EasyAgile' or enable it globally for all projects from Administration area. It will be available under 'Easy Agile' tab.
+Then restart Redmine. In project's setting in Modules include 'EasyAgile' or enable it globally for all projects from Administration area. It will be available under 'Easy Agile' tab.
 
 == Description
 
@@ -20,8 +20,10 @@ EasyAgile is a simple task board which allows you to define stories and track th
 
 Easy Agile based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile] standalone application by {Jandaweb}[http://www.jandaweb.com/]
 
-Project team:
+=== Project team:
 {Mykhaylo Sorochan}[http://msorc.github.com] - software development
+
 Nataliya Shatokhina - GUI testing
 
-Copyright (c) 2010 Sphere Consulting Inc. released under the MIT license
+
+Copyright (c) 2010 Sphere Consulting Inc., released under the MIT license (see LICENSE)
