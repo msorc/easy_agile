@@ -7,7 +7,7 @@ Redmine::Plugin.register :easy_agile do
   name 'Redmine Easy Agile plugin'
   author 'Sphere Consulting Inc.'
   description 'Simple scrum board for agile teams'
-  version '0.0.1'
+  version '1.0'
   url 'http://github.com/SphereConsultingInc/easy_agile'
   author_url 'http://sphereinc.com'
 
