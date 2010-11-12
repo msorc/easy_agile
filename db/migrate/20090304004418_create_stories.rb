@@ -1,6 +1,5 @@
 class CreateStories < ActiveRecord::Migration
   def self.up
-    puts "STORIES!!!!!!!"
     create_table :stories do |t|
       t.integer :project_id
       t.integer :iteration_id
