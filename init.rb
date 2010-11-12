@@ -8,8 +8,8 @@ Redmine::Plugin.register :easy_agile do
   author 'Sphere Consulting Inc.'
   description 'Simple scrum board for agile teams'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'http://github.com/SphereConsultingInc/easy_agile'
+  author_url 'http://sphereinc.com'
 
   project_module :easy_agile do
     permission :easy_agile_manage_iterations, :iterations => [:index, :new, :create, :show, :edit, :update, :planned, :finished]
