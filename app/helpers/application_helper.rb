@@ -19,7 +19,6 @@ module ApplicationHelper
                            'flash',
                            'story',
                            'request',
-                           'new_story_adder',
                            'acceptance_criteria',
                            'iteration_planning',
                            'iteration_active',

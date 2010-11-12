@@ -31,9 +31,6 @@ $(document).ready(function() {
   if ($('#stories_available')[0]) {
     // start swapper
     StorySwapper.init();
-
-    // AJAXy story adding
-    new NewStoryAdder();
   }
 
   // iterations/show when active
