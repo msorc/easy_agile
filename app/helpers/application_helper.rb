@@ -1,16 +1,5 @@
 module ApplicationHelper
 
-  def landing_stylesheet_link_tag
-    stylesheet_link_tag('reset-fonts',
-                        'landing/layout',
-                        'landing/typography',
-                        'landing/colours',
-                        'story/layout',
-                        'story/typography',
-                        'story/colours',
-                        :cache => 'landing')
-  end
-
   def javascript_includes
     javascript_include_tag('jquery-1.3.2.min.js',
                            'jquery-ui-1.7.custom.min.js',
@@ -24,62 +13,13 @@ module ApplicationHelper
                            'iteration_active',
                            'backlog_prioritisation',
                            :plugin => 'easy_agile',
-                           :cache => false)
+                           :cache => true)
   end
 
   def next_steps(&block)
     content = '<div id="next_steps"><h2>Next Steps</h2>'
     content += yield if block_given?
     content += '</div>'
-  end
-
-  def new_user_path
-    url_with_https(:new_user) || super
-  end
-
-  def new_session_path
-    url_with_https(:new_session) || super
-  end
-
-  def users_path
-    url_with_https(:users) || super
-  end
-
-  def session_path
-    url_with_https(:session) || super
-  end
-
-  def privacy_policy_path
-    url_with_http(:privacy_policy) || super
-  end
-
-  def root_path
-    url_with_http(:root) || super
-  end
-
-  def url_with_https(sym)
-    send("#{sym}_url", :protocol => 'https') if RAILS_ENV == 'production'
-  end
-
-  def url_with_http(sym)
-    send("#{sym}_url", :protocol => 'http') if RAILS_ENV == 'production'
-  end
-
-  def google_analytics_tag(id)
-    if controller.google_analytics?
-
-      <<JAVASCRIPT
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("#{id}");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
-JAVASCRIPT
-    end
   end
 
   def story_format(content)

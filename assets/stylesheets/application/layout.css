@@ -76,15 +76,15 @@ div.section .errorExplanation h3 { position: relative; padding: 0; margin: 0;
                            min-width:275px; float:left;
                            margin-right:30px;
                            margin-bottom:30px }
-/* body#home_show #iterations { min-width:345px } */
-/* body#home_show #iterations div.active { padding-top:45px } */
-/* body#home_show #recently_finished_iterations .finished ol, */
-/* body#home_show #iterations ol { overflow:hidden } */
-/* body#home_show #recent_work .section { padding:0 } */
-/* body#home_show #recent_work .section>ol>li { padding:45px 30px 15px 30px } */
-/* body#home_show #recent_work .section>ol>li, */
-/* body#home_show #recent_work li div.stories { overflow:hidden } */
-/* body#home_show #recent_work li div.iteration { margin-right:30px } */
+div#home_show #iterations { min-width:345px }
+div#home_show #iterations div.active { padding-top:45px }
+div#home_show #recently_finished_iterations .finished ol,
+div#home_show #iterations ol { overflow:hidden }
+div#home_show #recent_work .section { padding:0 }
+div#home_show #recent_work .section>ol>li { padding:45px 30px 15px 30px }
+div#home_show #recent_work .section>ol>li,
+div#home_show #recent_work li div.stories { overflow:hidden }
+div#home_show #recent_work li div.iteration { margin-right:30px }
 /* /\* end home/show *\/ */
 
 /* iterations/index */

@@ -1,40 +1,63 @@
+<%= stylesheet_link_tag(
+                        'story/layout',
+                        'story/colours',
+                        'story/typography',
+
+                        'iteration/layout',
+                        'iteration/typography',
+                        'iteration/colours',
+                        'iteration_planning/layout',
+                        'iteration_planning/typography',
+                        'iteration_planning/colours',
+                        'iteration_active/layout',
+                        'iteration_active/typography',
+                        'iteration_active/colours',
+
+                        'application/layout',
+                        'application/colours',
+                        'application/typography',
+                        :cache => true, :plugin => 'easy_agile') %>
 <h3><%= l(:easy_agile_home) %></h3>
-
-<% unless @user.active_iterations_worked_on.empty? -%>
-  <div id="recent_work" class="section_container">
-    <div class="section">
-      <h4><%= l(:recent_work) %></h4>
-      <ol>
-        <%= render :partial => 'my/blocks/active_work',
-          :collection => @user.active_iterations_worked_on %>
-      </ol>
-    </div>
-  </div>
-<% end -%>
-
-<% unless @user.recently_finished_iterations_worked_on.empty? -%>
-  <div id="recently_finished_iterations" class="section_container">
-    <div class="section">
-      <h4><%= l(:recently_finished_iterations) %></h4>
-      <div class="finished">
-        <ol>
-          <%= render @user.recently_finished_iterations_worked_on %>
-        </ol>
+<div class="ea_body <%= body_classes.join(' ') %>"
+     id="home_show">
+  <div class="ea_container">
+    <% unless @user.active_iterations_worked_on.empty? -%>
+      <div id="recent_work" class="section_container">
+        <div class="section">
+          <h3><%= l(:recent_work) %></h3>
+          <ol class="iterations_list">
+            <%= render :partial => 'my/blocks/active_work',
+                :collection => @user.active_iterations_worked_on %>
+          </ol>
+        </div>
       </div>
-    </div>
-  </div>
-<% end -%>
+    <% end -%>
 
-
-<% unless @user.active_iterations.empty? -%>
-  <div id="iterations" class="section_container">
-    <div class="section">
-      <h4><%= l(:active_iterations) %></h4>
-      <div class="active">
-        <ol>
-          <%= render @user.active_iterations, :width => 300 %>
-        </ol>
+    <% unless @user.recently_finished_iterations_worked_on.empty? -%>
+      <div id="recently_finished_iterations" class="section_container">
+        <div class="section">
+          <h3><%= l(:recently_finished_iterations) %></h3>
+          <div class="finished">
+            <ol class="iterations_list">
+              <%= render @user.recently_finished_iterations_worked_on %>
+            </ol>
+          </div>
+        </div>
       </div>
-    </div>
+    <% end -%>
+
+
+    <% unless @user.active_iterations.empty? -%>
+      <div id="iterations" class="section_container">
+        <div class="section">
+          <h3><%= l(:active_iterations) %></h3>
+          <div class="active">
+            <ol class="iterations_list">
+              <%= render @user.active_iterations, :width => 300 %>
+            </ol>
+          </div>
+        </div>
+      </div>
+    <% end -%>
   </div>
-<% end -%>
+</div>
