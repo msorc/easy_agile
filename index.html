@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>SphereConsultingInc/easy_agile @ GitHub</title>
+	
+	<style type="text/css">
+		body {
+  		margin-top: 1.0em;
+  		background-color: #24d185;
+		  font-family: "Helvetica,Arial,FreeSans";
+  		color: #ffffff;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+		h1 { font-size: 3.8em; color: #db2e7a; margin-bottom: 3px; }
+		h1 .small { font-size: 0.4em; }
+		h1 a { text-decoration: none }
+		h2 { font-size: 1.5em; color: #db2e7a; }
+    h3 { text-align: center; color: #db2e7a; }
+    a { color: #db2e7a; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+		pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+	</style>
+	
+</head>
+
+<body>
+  <a href="http://github.com/SphereConsultingInc/easy_agile"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <div id="container">
+
+    <div class="download">
+      <a href="http://github.com/SphereConsultingInc/easy_agile/zipball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+      <a href="http://github.com/SphereConsultingInc/easy_agile/tarball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    </div>
+
+    <h1><a href="http://github.com/SphereConsultingInc/easy_agile">easy_agile</a>
+      <span class="small">by <a href="http://github.com/SphereConsultingInc">SphereConsultingInc</a></span></h1>
+
+    <div class="description">
+      Easy Agile is a Redmine plugin for agile project management.
+    </div>
+
+    <h2>Dependencies</h2>
+<p>gruff</p>
+<h2>Install</h2>
+<p>Install Redmine. Follow the Redmine plugin installation manual. Or go this way (inside the Redmine directory):
+
+  ./script/plugin install git@github.com:SphereConsultingInc/easy_agile.git
+  rake db:migrate_plugins RAILS_ENV=production (or simply "rake db:migrate_plugins" for development mode)
+Install nested_layouts plugin (from Redmine root directory):
+
+  ./script/plugin install git://github.com/jwigal/nested_layouts.git
+Install gruffs library (if you want your Redmine installation to be portable):
+
+  gem install gruff
+  cd vendor/plugins && gem unpack gruff
+or (if you want to use gruff from gems):
+
+  gem install gruff
+and add the following line to your config/environment.rb file:
+
+  config.gem "gruff"
+Then restart Redmine. In project’s setting in Modules include ‘Easy Agile’ or enable it globally for all projects from Administration area. It will be available under ‘Easy Agile’ tab.</p>
+<h2>License</h2>
+<p>MIT</p>
+<h2>Authors</h2>
+<p>Mykhaylo Sorochan (msorochan@sphereconsultinginc.com)<br/><br/>      </p>
+<h2>Contact</h2>
+<p>Mykhaylo Sorochan (msorochan@sphereconsultinginc.com)<br/>      </p>
+
+
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/SphereConsultingInc/easy_agile/zipball/master">zip</a> or
+      <a href="http://github.com/SphereConsultingInc/easy_agile/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/SphereConsultingInc/easy_agile</pre>
+    </p>
+
+    <div class="footer">
+      get the source code on GitHub : <a href="http://github.com/SphereConsultingInc/easy_agile">SphereConsultingInc/easy_agile</a>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
