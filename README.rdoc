@@ -5,11 +5,11 @@ Easy Agile is a Redmine[http://www.redmine.org] plugin for agile development tea
 == Install
 {Install Redmine}[http://www.redmine.org/wiki/redmine/RedmineInstall]. Follow the Redmine plugin installation manual[http://www.redmine.org/wiki/redmine/Plugins]. Or go this way (inside the Redmine directory):
 
-  # ./script/plugin install git@github.com:SphereConsultingInc/easy_agile.git
-  # rake db:migrate_plugins RAILS_ENV=production (or simply "rake db:migrate_plugins" for development mode)
+  ./script/plugin install git@github.com:SphereConsultingInc/easy_agile.git
+  rake db:migrate_plugins RAILS_ENV=production (or simply "rake db:migrate_plugins" for development mode)
 
 Install nested_layouts[https://github.com/jwigal/nested_layouts] plugin (from Redmine root directory):
-  # ./script/plugin install git://github.com/jwigal/nested_layouts.git
+  ./script/plugin install git://github.com/jwigal/nested_layouts.git
 
 Install {gruffs library}[https://github.com/topfunky/gruff] (if you want your Redmine installation to be portable):
   gem install gruff
