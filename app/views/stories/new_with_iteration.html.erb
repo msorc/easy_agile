@@ -4,7 +4,7 @@
 <%= form.error_messages %>
 <p class="checkbox" id="add_to_iteration">
   <%= form.check_box :iteration_id, {}, @iteration.id, nil %>
-  <%= form.label :iteration_id, l(:add_to_iteration) + " '#h(@iteration)}'" %>
+  <%= form.label :iteration_id, l(:add_to_iteration) + " '#{h(@iteration)}'" %>
 </p>
 <%= render form %>
 <p class="submit">
