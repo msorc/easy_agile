@@ -21,6 +21,8 @@ and add the following line to your config/environment.rb file:
 
 Then restart Redmine. In project's setting in Modules include 'Easy Agile' or enable it globally for all projects from Administration area. It will be available under 'Easy Agile' tab.
 
+Recent activities summary is available inside 'My Page' area.
+
 == Description
 Easy Agile is a simple task board which allows you to define stories and track their statuses through iteration. The application is quite straigtforward for the people familiar with the SCRUM and Agile methodology.
 
@@ -31,4 +33,4 @@ Easy Agile based on the original {Simply Agile}[http://github.com/camelpunch/sim
 * {Mykhaylo Sorochan}[http://msorc.github.com] - software development
 * Nataliya Shatokhina - GUI testing
 
-Copyright (c) 2010 Sphere Consulting Inc., released under the MIT license (see LICENSE).
+Copyright (c) 2010 {Sphere Consulting Inc.}[http://www.sphereinc.com], released under the MIT license (see LICENSE).
