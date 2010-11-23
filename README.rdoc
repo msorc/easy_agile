@@ -11,6 +11,9 @@ Easy Agile is a Redmine[http://www.redmine.org] plugin for agile development tea
 Install nested_layouts[https://github.com/jwigal/nested_layouts] plugin (from Redmine root directory):
   ./script/plugin install git://github.com/jwigal/nested_layouts.git
 
+Install ImageMagick and RMagick:
+See the RMagick's {Installation FAQ}[http://rmagick.rubyforge.org/install-faq.html] for details.
+
 Install {gruffs library}[https://github.com/topfunky/gruff] (if you want your Redmine installation to be portable):
   gem install gruff
   cd vendor/plugins && gem unpack gruff
