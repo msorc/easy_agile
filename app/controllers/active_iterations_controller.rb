@@ -1,5 +1,6 @@
 class ActiveIterationsController < ApplicationController
 
+  helper :stories
   before_filter :get_iteration
 
   def create
