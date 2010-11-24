@@ -33,7 +33,7 @@
       </p>
       <% unless @project.iterations.finished.empty? %>
       <p>
-      <%= link_to l(:finished_iterations), finished_iterations_url %>
+      <%= link_to l(:finished_iterations), finished_project_iterations_path(@project) %>
       </p>
       <% end %>
       </div>
