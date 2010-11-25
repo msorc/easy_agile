@@ -43,24 +43,22 @@ class Burndown
   end
 
   def actual_data
-    data = [iteration.story_points_remaining]
+    data = [iteration.initial_estimate]
 
     data_points = BurndownDataPoint.for_iteration(iteration).inject({}) do |data_points, point|
       data_points[point.date] = point.story_points
       data_points
     end
 
-    today = Date.today
+    today = [Date.today, iteration.end_date].min
     start = iteration.start_date
     previous_points = data.last
-    (0...(today - start).to_i).reverse_each do |d|
+    (0...(today - start).to_i).each do |d|
       previous_points = data_points[start + d.days] || previous_points
       data << previous_points
     end
 
-    data << iteration.initial_estimate
-    data.reverse!
-
+    data << iteration.story_points_remaining if today < iteration.end_date
     data
   end
 
