@@ -16,7 +16,7 @@
                 :width => 350) %>
   <p id="time_remaining">
   <% if @iteration.finished? %>
-    <%= l(:iteration_finished_on) + l(@iteration.end_date) %>
+    <%= l(:iteration_finished_on) %>  <strong><%= @iteration.end_date %></strong>
   <% else %>
     <strong><%=  @iteration.start_date %></strong><strong> - <%=  @iteration.end_date %></strong>. <%= l(:iteration_days_left) %>: <strong><%= @iteration.days_remaining.to_s %></strong>.
   <% end %>
