@@ -1,7 +1,8 @@
 <% content_for :title, "#{@project} #{l(:backlog)}" %>
 <% content_for :h2, h("#{@project} #{l(:backlog)}") %>
 
-<% form_for @project do |f| %>
+<% form_for :project, @project, :url => { :action => 'edit' } do |f| %>
+
 <p class="guidance"><%= l(:backlog_drag_stories) %></p>
 <ol class="stories">
   <%= render @project.stories.backlog %>

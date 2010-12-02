@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :projects do |project|
+  map.with_options :name_prefix => 'project_', :path_prefix => 'projects/:project_id' do |project|
     project.resource :easy_agile, :controller => 'easy_agile', :member => { :my_page => :get }
 
     project.resources :iterations, :collection => { :finished => :get, :planned => :get } do |iteration|
