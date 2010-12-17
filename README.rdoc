@@ -3,9 +3,12 @@
 Easy Agile is a Redmine[http://www.redmine.org] plugin for agile development teams. Based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile].
 
 == Install
-{Install Redmine}[http://www.redmine.org/wiki/redmine/RedmineInstall]. Follow the Redmine plugin installation manual[http://www.redmine.org/wiki/redmine/Plugins]. Or go this way (inside the Redmine directory):
-
+{Install Redmine}[http://www.redmine.org/wiki/redmine/RedmineInstall]. Follow the Redmine plugin installation manual[http://www.redmine.org/wiki/redmine/Plugins]. Or go this way (inside the Redmine directory). Make sure you have git installed:
   ./script/plugin install git@github.com:SphereConsultingInc/easy_agile.git
+or:
+  cd vendor/plugins
+  git clone git://github.com/SphereConsultingInc/easy_agile.git
+Start migration:
   rake db:migrate_plugins RAILS_ENV=production (or simply "rake db:migrate_plugins" for development mode)
 
 Install nested_layouts[https://github.com/jwigal/nested_layouts] plugin (from Redmine root directory):
