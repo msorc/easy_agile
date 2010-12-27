@@ -12,8 +12,7 @@ module ApplicationHelper
                            'iteration_planning',
                            'iteration_active',
                            'backlog_prioritisation',
-                           :plugin => 'easy_agile',
-                           :cache => true)
+                           :plugin => 'easy_agile')
   end
 
   def next_steps(&block)
