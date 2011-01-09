@@ -26,7 +26,7 @@ Redmine::Plugin.register :easy_agile do
   end
 
   # observer
-  ActiveRecord::Base.observers = :acceptance_criterion_observer, :story_action_observer
+  ActiveRecord::Base.observers << :acceptance_criterion_observer << :story_action_observer
 
   menu :project_menu, :easy_agile, { :controller => 'easy_agile', :action => 'show' }, :caption => 'Easy Agile', :before => :calendar, :param => :project_id
 
