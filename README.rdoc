@@ -35,7 +35,6 @@ Easy Agile is a simple task board which allows you to define stories and track t
 Easy Agile based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile] standalone application by {Jandaweb}[http://www.jandaweb.com/] (see LICENSE.simply_agile).
 
 === Project team
-* Mykhaylo Sorochan - software development
-* Nataliya Shatokhina - GUI testing
+* Sphere Consulting Inc Development Team
 
 Copyright (c) 2010 {Sphere Consulting Inc.}[http://www.sphereinc.com], released under the MIT license (see LICENSE).
