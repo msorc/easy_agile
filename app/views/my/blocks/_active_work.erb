@@ -4,6 +4,7 @@ ratio = 600 / width
 height = 450 / ratio
 
 iteration = active_work
+unless iteration.nil? || iteration == 0
 %>
 <li class="<%= cycle('odd', 'even') %>">
   <div class="iteration">
@@ -20,3 +21,6 @@ iteration = active_work
     </ol>
   </div>
 </li>
+<%
+end
+%>
