@@ -34,4 +34,6 @@ Easy Agile is a simple task board which allows you to define stories and track t
 == Credits
 Easy Agile based on the original {Simply Agile}[http://github.com/camelpunch/simply_agile] standalone application by {Jandaweb}[http://www.jandaweb.com/] (see LICENSE.simply_agile).
 
-Development and experimental repository of the {easy_agile plugin}[https://github.com/SphereConsultingInc/easy_agile]
+Development and experimental repository of the {easy_agile plugin}[https://github.com/SphereConsultingInc/easy_agile].
+
+Copyright © 2010 Sphere Consulting Inc., released under the MIT license (see LICENSE).
